@@ -17,7 +17,9 @@
 ## 분류
 ### Information
 * [웹프론트엔드]  
-  * [웹 개발자 포트폴리오를 위한 10가지 팁](https://github.com/jdaun/TIL/blob/master/Information/Web-Front-End/10tipsforwebdeveloper.md)
+  * [프런트엔드마스터가 되고싶다면 알아야 할 프로젝트 9선](https://github.com/jdaun/TIL/blob/master/Information/Web-Front-End/9projectsforMaster.md)
+* [Android]
+  * 
 ### Python
 * [파이썬이란?](https://github.com/jdaun/TIL/blob/master/Python/About-Python.md)
 ### C
