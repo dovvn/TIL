@@ -17,7 +17,7 @@
 ## 분류
 ### Information
 * [웹프론트엔드]  
-  * [웹 개발자 포트폴리오를 위한 10가지 팁]()
+  * [웹 개발자 포트폴리오를 위한 10가지 팁](https://github.com/jdaun/TIL/blob/master/Information/Web-Front-End/10tipsforwebdeveloper.md)
 ### Python
 * [파이썬이란?](https://github.com/jdaun/TIL/blob/master/Python/About-Python.md)
 ### C
