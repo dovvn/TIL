@@ -68,7 +68,7 @@ Nuxt.js는 Vue버전의 Next.js이다. 서버 사이드 렌더링과 SPA의 한 
   *  Nuxt.js
      - 구성요소 및 pages
      - 데이터 취득
-  *  Storyblock모듈
+  *  Storybook모듈
   *  Mixin
   *  Vuex
   *  SCSS
