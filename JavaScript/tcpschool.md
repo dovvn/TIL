@@ -7,10 +7,10 @@
 
 # 목차
 * [JavaScript란?](#javascript란)
-* JavaScript의 특징
-* JavaScript의 출력
-* JavaScript의 적용
-* 기본 타입
+* JavaScript의 특징(#javascript의-특징)
+* JavaScript의 출력(#javascript의-출력)
+* JavaScript의 적용(#javascript의-적용)
+* 기본 타입(#기본-타입)
 
 
 ## JavaScript란?
