@@ -24,4 +24,4 @@
 * [파이썬이란?](https://github.com/jdaun/TIL/blob/master/Python/About-Python.md)
 ### C 
 ### JavaScript
-* [자바스크립트 이론](https://github.com/jdaun/TIL/blob/master/JavaScript/tcpschool.md)
+* [자바스크립트 이론](https://github.com/jdaun/TIL/blob/master/JavaScript/concept.md)
