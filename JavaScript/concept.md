@@ -1,5 +1,6 @@
-# JavaScript 입문
-이 문서는 프로그래머스 사이트의 강의 중 [Hello, JavaScript](https://programmers.co.kr/learn/courses/3#introduction)를 듣고 필기 기록으로 업뎃될 예정입니다.
+# JavaScript 이론
+이 문서는 프로그래머스 사이트의 강의 중 [Hello, JavaScript](https://programmers.co.kr/learn/courses/3#introduction)를 듣고 필기 기록용으로 작성한다.
+이후, 실습 중 습득한 추가적인 지식들 또한 추가될 예정이다.
 
 # 목표
 2020-01-10~2020-01-10
