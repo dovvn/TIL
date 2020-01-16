@@ -40,7 +40,7 @@ var username = document.getElementById("username");
 
 ## Babel
 JSX를 비롯한 새로운 자바스크립트 문법들을 사용하기 위해서 Babel이라는 도구를 사용한다.
-![Babel](https://github.com/jdaun/TIL/blob/master/JavaScript/img/webpack.PNG)
+![Babel](https://github.com/jdaun/TIL/blob/master/JavaScript/img/babel.PNG)
 
 # Comment
 _200116_ 아직 처음 듣는 용어들이 많아서 싱숭생숭하다. 강의를 들어도 알듯말듯한 느낌이 든다. 용어를 정리하면서 대략적으로 이해는 한 것 같지만 아직 부족하다는 느낌이 든다. 언어공부를 할 때, 코드로 짜보는것도 중요하지만 이 개념이 나타나게 된 배경또한 알아야한다고 생각한다. 다음시간에는 첫강부터 한번더 복습을 해보면서 놓쳤던 부분들도 한번 더 되돌아 보는 시간을 가지도록 하자.
