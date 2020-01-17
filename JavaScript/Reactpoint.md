@@ -119,7 +119,7 @@ Class App extends Component{
 export default App;
 ````
 
-## 4. var vs const vs let
+## 4. var, const, let
 ### var - 함수 레벨 범위(Function Level Scope)
 scope가 함수 단위이다. 즉, 아래 코드에서 a값이 유효한 곳은 foo함수안 전체이다.  
 더이상은 ES6에서 사용하지 않는다.
@@ -134,7 +134,7 @@ function foo(){
 }
 ```
 
-## let, const - 블록 레벨 스코프(Block Level Scope)
+### let, const - 블록 레벨 스코프(Block Level Scope)
 scope가 괄호 단위이다. 즉, 아래 코드에서 a값이 유효한 곳은 괄호가 열리고 닫히는 부분 까지이다.  
 let은 유동적인 값이며 const는 한번 선언 후 고정적인 값이다.
 ```javascript
@@ -148,11 +148,11 @@ function foo(){
 }
 ```
 
-# 5. 조건부 렌더링  
+## 5. 조건부 렌더링  
 삼항연산자나 AND연산자를 사용한다.  
 리액트에서는 if문을 바로 사용할 수 없다.(JSX내에서 사용하기 위해서는 IIFE를 사용해야 한다.)  
 
-## 삼항연산자
+### 삼항연산자
 ```javascript
 import React, { Component } from 'react';
 
@@ -173,7 +173,7 @@ class App extends Component {
 export default App;
 ```
 
-## AND연산자
+### AND연산자
 ```javascript
 import React, { Component } from 'react';
 
@@ -193,7 +193,7 @@ class App extends Component {
 export default App;
 ```
 
-## IIFE - 즉시 실행 함수 표현
+### IIFE - 즉시 실행 함수 표현
 조건이 여러개일 경우에는 보통 jsx밖에서 코드를 작성하는 것이 일반적이지만, 만약 jsx내부에서 조건부렌더링을 할 경우 IIFE를 이용해서 함수를 선언하고 바로 실행할 수 있다.
 ```javascript
 import React, { Component } from 'react';
