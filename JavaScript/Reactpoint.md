@@ -2,7 +2,7 @@
 이 문서는 인프런 강의를 듣고 필기 기록용으로 작성한다.  
 
 # 목표 
-_총 172분 2010-01-19_ 오픽준비 때문에 일정을 미루게 되었음.  
+_총 172분 ~ 최대 2010-01-25_ 토익,오픽준비 때문에 일정을 미루게 되었음.  
 
 # 프론트엔드 라이브러리
 웹애플리케이션에서 여러 유저 인터페이스를 동적으로 나타내기 위해 수많은 상태를 관리해주어야 한다.  
@@ -24,7 +24,7 @@ var username = document.getElementById("username");
 따라서 이에 도움을 주는 라이브러리가 등장하게 되는데 이것이 바로 Anbular, Vue, React등이다.
 
 
-# Virual DOM
+# Virtual DOM
 리액트는 Virtual Dom을 사용하여 데이터의 변화를 효과적으로 관리한다.
 이에 대한 개념은 다음 애니메이션 영상을 통해 쉽게 이해할 수 있다.
 * React and the Virtual DOM(https://www.youtube.com/watch?v=muc2ZF0QIO4)
@@ -35,25 +35,29 @@ var username = document.getElementById("username");
 리액트 프로젝트를 하기 위해서는 위 두가지가 필요하다.
 
 ## Webpack
-코드를 의존하는 순서대로 잘 합쳐서 하나 또는 여러개의 파일로 결과물을 만들어낸다.
-여러가지 파일을 하나의 파일로 만들어준다. 나중에 규칙에 따라서 분리시켜줄 수 있다
-웹프로젝트를 만들 때 전체적으로 파일들을 관리해주는 도구라고 이해하면 된다.
+코드를 의존하는 순서대로 잘 합쳐서 하나 또는 여러개의 파일로 결과물을 만들어낸다.  
+여러가지 파일을 하나의 파일로 만들어준다. 나중에 규칙에 따라서 분리시켜줄 수 있다  
+웹프로젝트를 만들 때 전체적으로 파일들을 관리해주는 도구라고 이해하면 된다.  
+
 ![Webpack](https://github.com/jdaun/TIL/blob/master/JavaScript/img/webpack.PNG)
 
 ## Babel
 자바스크립트 변환 도구
 자바스크립트는 계속에서 변화하고 있지만 node.js나 웹브라우저에서 모든 문법을 지원하지 않는다.  
 따라서, 이 문법을 이전 자바스크립트로 변환한다.  
-우리는 JSX라는 리액트 컴포넌트를 작성하는 문법을 사용할 때 이 도구가 사용 될 것이다.
+우리는 JSX라는 리액트 컴포넌트를 작성하는 문법을 사용할 때 이 도구가 사용 될 것이다. 
+
 ![Babel](https://github.com/jdaun/TIL/blob/master/JavaScript/img/babel.PNG)
 
 # 리액트 프로젝트
 리액트 프로젝트는 CODESANDBOX라는 서비스를 사용하여 실습이 진행된다. https://bit.ly/beginreact  
 
+# 컴포넌트 만드는 방법
+## 1. 클래스
 ````javascript
 import React, { Component } from 'react'; //react모듈을 불러와서 사용한다.
 
-class App extends Component { //컴포넌트를 만드는 방법 1.클래스 2.함수 여기서는 클래스 사용
+class App extends Component {
   render() { //메소드, 반드시 js형태의 코드를 return해주어야 한다.
     return (
       <div>
@@ -64,6 +68,12 @@ class App extends Component { //컴포넌트를 만드는 방법 1.클래스 2.�
 }
 export default App;
 ````
+
+## 2. 함수
+_아래 props 학습 후, 작성_
+단순히 props만 받아와서 보여주는 경우에 주로 작성한다.
+
+
 
 # JSX
 리액트에서 사용되는 문법으로 HTML이랑 비슷하지만, 지켜야할 규칙이 몇가지 있다.
@@ -245,9 +255,146 @@ export default App;
 ```
 
 
+## 6. CSS 사용하기
+리액트에서 CSS를 적용해 줄 때 HTML과는 다르게 객체형으로 넣어준다.  
+이때, 속성값은 카멜 표기법을 적용한다.  
+```javascript
+import React, { Component } from 'react';
+
+class App extends Component {
+  render() {
+    const style = {
+      backgroundColor: 'black',
+      padding: '16px',
+      color: 'white',
+      fontSize: '36px'
+    };
+    return (
+      <div style={style}>
+        안녕하세요!
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+### 실행 결과
+![css](https://github.com/jdaun/TIL/blob/master/JavaScript/img/jsx_css_%EC%8B%A4%ED%96%89%EA%B2%B0%EA%B3%BC.PNG)
+
+## 7. Class 사용하기 
+리액트에서는 className으로 클래스를 적용한다.  
+
+App.js
+```javascript
+import React, { Component } from 'react';
+import './App.css'; //css파일 가져오기
+
+class App extends Component {
+  render() {
+    const style = {
+      backgroundColor: 'black',
+      padding: '16px',
+      color: 'white',
+      fontSize: '36px'
+    };
+    return (
+      <div className="App">
+        안녕하세요!
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+App.css  
+```css
+.App{
+  background: black;
+  color: aqua;
+  font-size: 1rem;
+  padding: 1rem;
+  font-weight: 600;
+}
+```
+
+### 실행결과
+![class](https://github.com/jdaun/TIL/blob/master/JavaScript/img/jsx_class_%EC%8B%A4%ED%96%89%EA%B2%B0%EA%B3%BC.PNG)
+
+## 8. 주석 작성하기
+괄호로 감싸거나 JSX태그 사이에서 작성할 수 있다.
+```javascript
+import React, { Component } from 'react';
+class App extends Component {
+  render() {
+    return (
+      <div>
+        {/*멀티라인도 예외가 아니다!*/}
+        <h1
+          //내가 여기에 주석을 쓸꺼야!
+        >리액트</h1>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+Props, State
+리액트에서 데이터를 다룰때 사용되는 개념
+## 9. Props ★
+부모컴포넌트가 자식컴포넌트에게 값을 전달할 때 사용된다.  
+즉, 컴포넌트 생성 시 불러와서 사용하게 되는데 위 사진에서 value가 하나의 Props가 된다. 매우 중요!  
+
+![props](https://github.com/jdaun/TIL/blob/master/JavaScript/img/props.PNG)
+
+
+MyName.js  
+```javascript
+import React, { Component } from 'react';
+class MyName extends Component{
+
+  static defaultProps = { //디폴트값 설정
+    name: '기본이름'
+  }
+
+  render(){
+    return(
+      <div>안녕하세요! 제 이름은 <b>{this.props.name}</b>입니다.</div>
+    );
+  }
+}
+
+export default MyName;
+```
+
+App.js  
+```javascript
+import React, { Component } from 'react';
+import MyName from './MyName';
+
+class App extends Component {
+  render() {
+    return <MyName name="어쩌구"/>;
+  }
+} 
+
+export default App;
+```
+위와 같이 MyName컴포넌트를 불러와서 props값인 name에 원하는 값을 설정할 수 있다.    
+이때 name에 어떠한 값도 설정되지 않는 경우에 대비하기 위해 MyName컴포넌트에서 디폴트값을 설정해 줄 수 있다.
+
+
+
 
 
 # Comment
 _200116_ 아직 처음 듣는 용어들이 많아서 싱숭생숭하다. 강의를 들어도 알듯말듯한 느낌이 든다. 용어를 정리하면서 대략적으로 이해는 한 것 같지만 아직 부족하다는 느낌이 든다. 언어공부를 할 때, 코드로 짜보는것도 중요하지만 이 개념이 나타나게 된 배경또한 알아야한다고 생각한다. 다음시간에는 첫강부터 한번더 복습을 해보면서 놓쳤던 부분들도 한번 더 되돌아 보는 시간을 가지도록 하자.
 
 _200117_ jsx문법까지 기본적으로 정리를 해보았다. 저번 시간에 들은 강의를 다시 들어보니, 프로젝트 시작 전 React에 대해 기본적으로 알아야 할 개념들이 조금씩 잡히기 시작하는 것 같다. 아무래도 강의를 모두 다 듣고 복습하는 것 보다 강의 듣고 => 일시정지 후 바로 정리, 코드 실습 => 커밋 전 복습하는것이 더 효과적인 학습 방법인 것같다.
+
+_200118_ props를 처음 배우게 되었다. 오늘 강의의 핵심은 props 이지만 역시나 어렵고 헷갈렸다. 자바의 상속 개념과 비슷한것 같기도 하다. 다음 시간에는 복습 후, 함수를 컴포넌트로 만드는 방법부터 학습하면 된다.
