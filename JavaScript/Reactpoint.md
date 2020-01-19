@@ -386,7 +386,7 @@ class App extends Component {
 export default App;
 ```
 위와 같이 MyName컴포넌트를 불러와서 props값인 name에 원하는 값을 설정할 수 있다.    
-이때 name에 어떠한 값도 설정되지 않는 경우에 대비하기 위해 MyName컴포넌트에서 디폴트값을 설정해 줄 수 있다.
+이때 name에 어떠한 값도 설정되지 않는 경우에 대비하기 위해 MyName컴포넌트에서 디폴트값을 설정해 줄 수 있다.  
 
 
 
