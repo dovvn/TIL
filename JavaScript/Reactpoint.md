@@ -291,7 +291,7 @@ App.js
 import React, { Component } from 'react';
 import './App.css'; //css파일 가져오기
 
-class App extends Component {
+class App extends Component { 
   render() {
     const style = {
       backgroundColor: 'black',
