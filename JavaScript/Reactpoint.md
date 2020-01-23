@@ -70,8 +70,10 @@ export default App;
 ````
 
 ## 2. 함수
-_아래 [props](https://github.com/jdaun/TIL/blob/master/JavaScript/Reactpoint.md#9-props-) 학습 후, 작성_
+_하단에 기재된 [props](https://github.com/jdaun/TIL/blob/master/JavaScript/Reactpoint.md#9-props-) 학습 후, 다시 보기_
 단순히 props만 받아와서 보여주는 경우에 주로 작성한다.
+
+더이상 코드의 상단에서 컴포넌트를 불러오지 않아도 된다. 그러나, 리액트를 불러오는 코드는 계속 유지해주어야 한다.
 
 
 
