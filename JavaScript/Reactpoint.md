@@ -50,7 +50,7 @@ var username = document.getElementById("username");
 ![Babel](https://github.com/jdaun/TIL/blob/master/JavaScript/img/babel.PNG)
 
 # 리액트 프로젝트
-리액트 프로젝트는 CODESANDBOX라는 서비스를 사용하여 실습이 진행된다. https://bit.ly/beginreact  
+리액트 프로젝트는 [CODESANDBOX라는 서비스](https://bit.ly/beginreact)를 사용하여 실습이 진행된다.  
 
 # 컴포넌트 만드는 방법
 ## 1. 클래스
@@ -70,7 +70,7 @@ export default App;
 ````
 
 ## 2. 함수
-_아래 props 학습 후, 작성_
+_아래 [props](https://github.com/jdaun/TIL/blob/master/JavaScript/Reactpoint.md#9-props-) 학습 후, 작성_
 단순히 props만 받아와서 보여주는 경우에 주로 작성한다.
 
 
@@ -344,10 +344,12 @@ class App extends Component {
 export default App;
 ```
 
-Props, State
+
+다음으로 배울 개념은 Props, State이다.
 리액트에서 데이터를 다룰때 사용되는 개념
+
 ## 9. Props ★
-부모컴포넌트가 자식컴포넌트에게 값을 전달할 때 사용된다.  
+부모컴포넌트가 자식컴포넌트에게 값을 전달할 때 사용된다._(부모가 자식에게 넘겨주는 값)
 즉, 컴포넌트 생성 시 불러와서 사용하게 되는데 위 사진에서 value가 하나의 Props가 된다. 매우 중요!  
 
 ![props](https://github.com/jdaun/TIL/blob/master/JavaScript/img/props.PNG)
@@ -375,7 +377,7 @@ export default MyName;
 App.js  
 ```javascript
 import React, { Component } from 'react';
-import MyName from './MyName';
+import MyName from './MyName'; //MyName.js 임포트 후 아래에서 렌더링해준다.
 
 class App extends Component {
   render() {
@@ -386,8 +388,12 @@ class App extends Component {
 export default App;
 ```
 위와 같이 MyName컴포넌트를 불러와서 props값인 name에 원하는 값을 설정할 수 있다.    
-이때 name에 어떠한 값도 설정되지 않는 경우에 대비하기 위해 MyName컴포넌트에서 디폴트값을 설정해 줄 수 있다.  
+이때 name에 어떠한 값도 설정되지 않는 경우에 대비하기 위해 MyName컴포넌트에서 디폴트값을 설정해 줄 수 있다.
 
+지금까지 만든 컴포넌트는 클래스로 생성되었다.
+그러나, 클래스 말고 [함수로 컴포넌트를 생성하는 방법](https://github.com/jdaun/TIL/blob/master/JavaScript/Reactpoint.md#2-%ED%95%A8%EC%88%98)이 있다.  
+이것은 딱히 복잡한 기능 없이 단순히 props를 받아와서 보여주는 경우 종종 작성한다.  
+아직 학습을 하지 않았다면, 다시 상단으로 올라가 확인하자.
 
 
 
