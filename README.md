@@ -16,8 +16,8 @@
 
 ## 분류
 ### Information
-* [웹프론트엔드]  
-  * [프런트엔드 마스터가 되고싶다면 알아야 할 프로젝트 9선](https://github.com/jdaun/TIL/blob/master/Information/Web-front-end/9projectsforMaster.md)
+* [웹 프론트엔드]  
+  * [프론트엔드 마스터가 되고싶다면 알아야 할 프로젝트 9선](https://github.com/jdaun/TIL/blob/master/Information/Web-front-end/9projectsforMaster.md)
 * [Android]
   * 
 ### Python
