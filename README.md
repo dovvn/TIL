@@ -22,7 +22,6 @@
   * 
 ### Python
 * [파이썬이란?](https://github.com/jdaun/TIL/blob/master/Python/About-Python.md)
-### C 
 ### JavaScript
 * [JavaScript 이론](https://github.com/jdaun/TIL/blob/master/JavaScript/concept.md)
 * React.js
