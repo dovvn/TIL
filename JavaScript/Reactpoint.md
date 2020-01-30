@@ -435,7 +435,62 @@ export default App;
 
 
 ## 2. State  
+State는 컴포넌트 자기 자신이 처음부터 들고 있는 값이다.  
+만약, 변화가 필요하다면 컴포넌트의 내장함수 중 하나인 setState()를 통해서 값을 변경해준다.  
+값이 바뀔때마다 컴포넌트는 리랜더링 된다.  
+여기서 차이점은 Props가 읽기전용이었다면, State는 값을 변경할 수 있다.  
 
+![state](https://github.com/jdaun/TIL/blob/master/JavaScript/img/state.PNG)
+
+Counter.js  
+```javascript
+import React, { Component } from 'react';
+
+class Counter extends Component {
+  state = {
+    number: 0
+  };
+
+  handleIncrease = () => { //화살표로 하지 않으면 this가 무엇인지 모르게 된다.
+    this.setState({
+      number: this.state.number+1
+    })
+  }
+
+  handleDecrease = () => {
+    this.setState({
+      number: this.state.number-1
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <div>카운터</div>
+        <div>값: {this.state.number}</div>
+        <button onClick={this.handleIncrease}>+</button>
+        <button onClick={this.handleDecrease}>-</button>
+      </div>
+    );
+  }
+}
+
+export default Counter;
+```  
+
+App.js    
+```javascript
+import React, { Component } from 'react';
+import Counter from './Counter';
+
+class App extends Component {
+  render() {
+    return <Counter />;
+  }
+}
+
+export default App;
+```
 
 
 # Comment
