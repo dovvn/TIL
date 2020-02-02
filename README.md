@@ -30,4 +30,5 @@
 * [클라우스 슈밥의 제4차 산업혁명]()
 * []()
 ### 영상
-* [The Age of AI - YouTube]()
+* The Age of AI - YouTube
+  * [E5 - 화성의 '우주 건축가들'](https://github.com/jdaun/TIL/blob/master/Video/TheAgeofAI_E5.md)
