@@ -28,7 +28,7 @@
   * [누구든지 하는 리액트: 초심자를 위한 react 핵심 강좌](https://github.com/jdaun/TIL/blob/master/JavaScript/Reactpoint.md)
 ### 책
 * [클라우스 슈밥의 제4차 산업혁명]()
-* []()
+* [가장 쉬운 AI(인공지능)]()
 ### 영상
 * The Age of AI - YouTube
   * [E1 - 적정선은 어디인가?]()
