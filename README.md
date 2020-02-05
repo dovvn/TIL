@@ -38,3 +38,4 @@
   * [E5 - 화성의 '우주 건축가들'](https://github.com/jdaun/TIL/blob/master/Video/TheAgeofAI_E5.md)
   * [E6 - 로봇이 내 일자리를 빼앗을까?]()
   * [E7 - 한 번에 알고리즘 하나로 세상을 구하기]()
+  * [E8 - AI가 외계인을 찾는 방식]()
