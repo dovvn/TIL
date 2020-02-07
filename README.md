@@ -26,6 +26,12 @@
 * [JavaScript 이론](https://github.com/jdaun/TIL/blob/master/JavaScript/concept.md)
 * React.js
   * [누구든지 하는 리액트: 초심자를 위한 react 핵심 강좌](https://github.com/jdaun/TIL/blob/master/JavaScript/Reactpoint.md)
+### MOOC
+* [컴퓨터공학 입문I]()
+* [컴퓨터공학 입문II]()
+* [Python 프로그래밍 I]()
+* [Python 프로그래밍 II]()
+* [특강: AI 입문]()
 ### 책
 * [클라우스 슈밥의 제4차 산업혁명]()
 * [가장 쉬운 AI(인공지능)]()
