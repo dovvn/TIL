@@ -27,7 +27,7 @@
 * React.js
   * [누구든지 하는 리액트: 초심자를 위한 react 핵심 강좌](https://github.com/jdaun/TIL/blob/master/JavaScript/Reactpoint.md)
 ### MOOC
-* [컴퓨터공학 입문I]()
+* [컴퓨터공학 입문I](https://github.com/jdaun/TIL/blob/master/MOOC/CS_part1.md)
 * [컴퓨터공학 입문II]()
 * [Python 프로그래밍 I]()
 * [Python 프로그래밍 II]()
