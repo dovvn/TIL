@@ -7,8 +7,8 @@
 
 # 목차
 * [컴퓨터 개요](#i-컴퓨터-개요)
-  * 문제 해결(provlem solvoing)(#문제-해결-(problem-solving)
-  * 컴퓨터와 자료표현(#컴퓨터와-자료-표현)
+  * [문제 해결(provlem solvoing)](#문제-해결problem-solving)
+  * [컴퓨터와 자료표현](#컴퓨터와-자료-표현)
 
 # I. 컴퓨터 개요  
 # 문제 해결(problem solving)
