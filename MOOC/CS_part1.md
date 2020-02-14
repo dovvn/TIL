@@ -1,4 +1,4 @@
-# [MOOC - Computer Science(컴퓨터공학 입문I) I](https://pabi.smartlearn.io/#courses)  
+# [MOOC - Computer Science(컴퓨터공학 입문) I](https://pabi.smartlearn.io/#courses)  
 이 문서는 위 MOOC강의를 듣고 필기용으로 기록되었습니다.  
 
 # 개요
@@ -6,7 +6,7 @@
 문제 해결을 위해 C 언어로 프로그래밍 언어의 기본 구조와 문법을 알고, 그 문법으로 해결할 수 있는 다양한 일상 생활의 문제를 예제를 통해 학습한다.  
 
 # 목차
-* [컴퓨터 개요](#i-컴퓨터-개요)
+* [I. 컴퓨터 개요](#i-컴퓨터-개요)
   * [문제 해결(provlem solvoing)](#문제-해결problem-solving)
   * [컴퓨터와 자료표현](#컴퓨터와-자료-표현)
 
