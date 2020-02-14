@@ -72,11 +72,11 @@
 * 비트(bit)  
   Binary Digit, 0 또는 1의 두 개 정보를 표현하는 정보의 최소 단위  
 * 바이트(byte)
-  연속된 8개의 비트(256개), 문자를 표현하는 단위  
+  연속된 8개의 비트(256개) 1byte = 8bit, 문자를 표현하는 단위  
 ## 컴퓨터와 사람의 의사소통  
 * 문자 코드
   * N비트의 조합에 일정한 문자를 할당하여 지정한 것을 문자 코드  
-  * 국제 표준인 문자 코드는 아스키코드, 유니코드  
+  * 국제 표준인 문자 코드는 아스키코드(7bit), 유니코드(16bit)  
 * 아스키 코드
   * ASCII(American Standard Code for Information Interchange)  
   * 국제적인 표준으로 문자 코드 체계로서 7비트를 사용하여 128개의 문자, 숫자, 특수문자 코드를 규정  
@@ -88,7 +88,7 @@
 사람이 표현할 수 있는 문자를 코드로 만들때 대문자, 소문자, 특수기호 등을 고려하여 128개 정도면 만들수 있다고 생각하였다.  
 ![binary](https://github.com/jdaun/TIL/blob/master/MOOC/img/binary.PNG)
 
-그래서 만들어진 것이 바로 아스키코드(7bit)이다.
+그래서 만들어진 것이 바로 아스키코드이다.
 ![binary2](https://github.com/jdaun/TIL/blob/master/MOOC/img/binary2.PNG)
 
 아스키 코드표는 다음과 같다. 0부터 127까지 총 128개를 이루고 있다.  
