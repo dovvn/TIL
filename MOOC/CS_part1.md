@@ -11,6 +11,8 @@
   * [컴퓨터와 자료표현](#week-1-2-컴퓨터와-자료-표현)
   * [프로그래밍 언어 종류](#week-1-3-프로그래밍-언어-종류)
   * [프로그래밍 개발환경](#week-1-4-프로그래밍-개발환경)
+* [Ⅱ. 프로그램 구조](#Ⅱ-프로그램-구조)
+  * [C언어 구조](#week-2-1-C언어-구조)
 
 # I. 컴퓨터 개요  
 # WEEK 1-1 문제 해결(problem solving)
@@ -158,3 +160,30 @@
 목적파일은 기계가 이해할 수 있는 언어이며 링커로 여러개의 파일을 하나로 묶어서 실행파일을 생성한다.  
 그리고 로더의 역할로 메모리를 거쳐서 프로그램을 실행하게 된다.  
 ![compileprocess](https://github.com/jdaun/TIL/blob/master/MOOC/img/compileprocess.PNG)
+
+
+# Ⅱ. 프로그램 구조  
+# WEEK 2-1 C언어 구조  
+## C언어 역사  
+  * 유닉스(Unix)라는 운영체제의 호환성을 높이기 위해 1972년 경 B언어를 재개발하면서 생성되었다.  
+  * 1983년 미국표준협회에서 ANSI C라는 표준안을 발표  
+  * C++, Java, Python등 많은 프로그래밍 언어의 기초 문법 포함  
+## 일반적인 프로그램 구조(모듈화) 
+![problemsolving](https://github.com/jdaun/TIL/blob/master/MOOC/img/problemsolving.PNG)  
+
+## C언어 구조 - 여러 개의 함수로 구성  
+![c_architecture](https://github.com/jdaun/TIL/blob/master/MOOC/img/c_architecture.PNG)  
+
+여기서 함수는 앞의 모듈의 개념이다. 반복되는 기능을 막고 필요할 때마다 함수를 불러서 사용한다.  
+제일 처음 시작하는 함수를 메인함수라 하고, 뒤에 나오는 함수들은 사용자가 정의해서 사용할 수 있는 함수를 의미한다.  
+메인함수가 오기 전에 '함수 밖 명령'에서 프로그램을 실행하기 전 만들어줘야 하는 내용들을 나열한다.
+
+사용자에게 두개의 입력값을 받아 더해서 출력하는 간단한 프로그램을 C언어 구조와 함께 보면 다음과 같다.  
+![c_architecture2](https://github.com/jdaun/TIL/blob/master/MOOC/img/c_architecture2.PNG)  
+
+* #include: 전처리지시자, 컴파일러가 기계어로 바꾸기 전에 <stdio.h>라는 헤더파일을 소스코드에 포함시켜달라는 의미
+* return 0: 나를 호출한 쪽으로 '0'을 넣어서 돌아가라 => 프로그램이 성공적으로 끝났음을 의미
+* c언어의 함수는 시스템에서 제공하는 1)라이브러리 함수, 2)메인 함수, 3)사용자 정의함수 로 정의할 수 있다. 
+
+## C프로그램 실행 순서
+![c_procedure](https://github.com/jdaun/TIL/blob/master/MOOC/img/c_procedure.PNG)
