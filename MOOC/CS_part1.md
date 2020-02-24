@@ -15,6 +15,9 @@
   * [C언어 구조](#week-2-1-C언어-구조)
   * [변수와 상수](#week-2-2-변수와-상수)
   * [데이터 타입](#week-2-3-데이터-타입)
+  * [전처리와 입출력 함수](#week-2-4-전처리와-입출력-함수)
+* [Ⅲ. 함수](#함수)
+  * [사용자 정의 함수](#week-3-1-사용자-정의-함수)
 # I. 컴퓨터 개요  
 # WEEK 1-1 문제 해결(problem solving)
 문제 입력 → 문제 해결방법과 절차(알고리즘) → 해결 출력
@@ -291,3 +294,117 @@ printf("%d", c1); //98
   sizeof (변수)    
   sizeof 변수  
   sizeof (자료형키워드)  
+  
+# WEEK2-4 전처리와 입출력 함수
+## 전처리기(preprocessor)
+컴파일러가 프로그래밍 언어를 기계어로 바꾸기 전에 처리해야할 명렁을 먼저 수행하는 것
+  * 다양한 라이브러리를 작업 중인 소스파일에서 사용할 수 있도록 헤더 파일을 포함(#include<stdio.h>)  
+  * #include  
+  ![전처리기_include](https://github.com/jdaun/TIL/blob/master/MOOC/img/preprocessor_include.PNG)  
+  #include<stdio.h>가 실행되면 전처리기는 stdio.h(헤더파일)에 있는 소스코드를 source.c에 뿌려주는 역할을 한다.  
+  * #define 문자열1 문자열2 //컴파일 전에 소스파일의 문자열1을 문자열2로 치환  
+  ![전처리기_define](https://github.com/jdaun/TIL/blob/master/MOOC/img/preprocessor_define.PNG)   
+  프로그램에서 3.141592가 계속 사용되는 경우, 이를 PI로 치환하면 컴파일 전에 전처리기에 의해서 다시 원래값인 3.141592로 치환이 된다.  
+## printf함수
+여러개의 다양한 데이터타입을 형식화시켜 출력하는 함수
+  * 문자열 출력  
+  예) printf("Hello World\n");
+  * 변수값 출력  
+  ```c
+  int a, b;
+  float c;
+  printf("%d %f %d\n", a, c, b);
+  printf("The number %d is my favorite number.\n", num);
+  ```
+  ![형식지정자](https://github.com/jdaun/TIL/blob/master/MOOC/img/format.PNG)
+## scanf함수
+여러개의 다양한 데이터타입을 한 번에 입력받을 수 있는 함수
+* 키보드로부터 입력된 데이터를 지정된 형식으로 변환하여 변수에 저장
+```c
+int a;
+scanf("%d", &a); //&는 주소연산자
+```
+* 임의의 개수로 입력 받을 수 있음  
+예1)
+```c
+int age;
+float weight;
+scanf("%d %f", &age, &weight);
+```
+예2)
+```c
+double d1, d2;
+scanf("%lf %lf", &d1, &d2);
+```
+
+## 예제 프로그램
+마일(mile)을 킬로미터(kilometer)로 변환
+* 입력 데이터: miles
+* 출력 데이터: kilometer
+* 관련 수식: 1mile = 1.609kilometers
+* 알고리즘
+1. 마일(miles)데이터를 입력 받는다.  
+2. 마일을 킬로미터로 변환한다. 2.1(1mile = 1.609kilometers)  
+3. 킬로미터를 출력한다.
+```c
+#include <stdio.h> /*printf, scanf 함수 원형*/
+int main(void)
+{
+  double miles, kilometers;
+  /*1*/
+  printf("Enter the distance in miles");
+  scanf("%lf", &miles);
+  /*2*/
+  kilometer = 1.609*miles;
+  /*3*/
+  printf("That equals %f kilometers. \n", kilometer);
+  return 0;
+}
+```
+
+
+# Ⅲ. 함수
+# WEEK 3-1 사용자 정의 함수
+## 함수의 개념
+독립적으로 수행하는 프로그램 단위  
+* C언어는 여러 개의 함수들로 이루어짐.
+* 프로그램에서 반복적으로 수행되는 기능을 함수로 만들어 호출.
+* 함수는 문제 해결의 방법
+  * 주어진 문제를 작은 문제, 즉 여러 함수로 나누어 생각할 수 있으므로 함수를 만드는 것은 문제 해결의 하나의 방법
+* 함수 이용의 장점
+  * 함수로 구성된 프로그램은 함수 단위로 구성되어 있어, 읽기 쉽고, 이해하기 쉬움
+  * 이미 정의된 함수는 여러 번 호출이 가능하므로 소스의 중복을 최소화하여 프로그램의 양을 줄이는 효과
+## C프로그램 함수의 종류
+1. 주(main)함수: 프로그램의 시작과 종료를 나타내는 함수로, 프로그램에 main()함수는 꼭 있어야 하는 함수이며, 사용자 저으이 함수라 할 수 있음  
+2. 사용자 정의 함수: 사용자(프로그래머)가 문제를 분석하여 필요한 기능으로 분류하여 기능별로 코딩하고자 할 때 만드는 함수 예)add(), swap()  
+3. 시스템 라이브러리 함수: 많이 사용하는 기능의 함수들을 시스템에서 미리 만들어 놓고 사용자가 사용할 수 있도록 제공하는 함수 예)입출력함수(scanf(), printf())  
+## 함수의 정의(Function definition): 함수 만들기
+두개의 정수를 매개변수로 입력받아 더한 값을 리턴하는 함수 만들기  
+```c
+int add(int x, int y)//함수의 머리, int-리턴타입, add-함수이름, int x, int y - 매개변수 리스트)
+//함수의 몸체
+{
+int sum;
+sum=x+y;
+return sum;
+}
+```
+## 사용자 정의 함수 만들기
+![사용자정의함수](https://github.com/jdaun/TIL/blob/master/MOOC/img/userfunction.PNG)  
+초기에 a,b,c 메모리 공간에는 0이 있다.
+
+## 용어 정리  
+* 변수(variable)    
+프로그램에서 데이터를 저장하는 공간    
+* 변수명(variable name)  
+선언된 변수의 메모리에 붙여진 이름   
+  * 변수명에 다른 값을 대입하면 예전 값은 지워지고 새로운 값을 저장(int a=10; a=100;)  
+* 데이터 타입(data types, 자료유형, 자료형)  
+변수를 선언할 때, 변수의 특성에 적합한 메모리를 할당하도록 만들어 놓은 예약어    
+(예: int, char, double)  
+* 함수(function, 모듈, 메소드(C++, JAVA))  
+프로그램에서 기능별로 나누고 독립적으로 실행할 수 있는 프로그램 단위   
+* 함수 정의(function definition)  
+함수를 만드는 것  
+* 함수 원형(function prototype, 함수 선언)  
+함수를 사용(호출)하기 이전에 함수의 머리(헤더)부분을 기술하는 단계  
