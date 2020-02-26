@@ -19,6 +19,7 @@
 * [Ⅲ. 함수](#ⅲ-함수)
   * [사용자 정의 함수](#week-3-1-사용자-정의-함수)
   * [함수와 매개 변수](#week-3-2-함수와-매개-변수)
+  * [주소에 의한 호출](#week-3-3-주소에-의한-호출)
 # I. 컴퓨터 개요  
 # WEEK 1-1 문제 해결(problem solving)
 문제 입력 → 문제 해결방법과 절차(알고리즘) → 해결 출력
@@ -175,6 +176,8 @@
   * C++, Java, Python등 많은 프로그래밍 언어의 기초 문법 포함  
 ## 일반적인 프로그램 구조(모듈화) 
 ![problemsolving](https://github.com/jdaun/TIL/blob/master/MOOC/img/problemsolving.PNG)  
+
+위 블록의 각각은 C언어에서 아래와 같이 함수로 나타낼 수 있다.  
 
 ## C언어 구조 - 여러 개의 함수로 구성  
 ![c_architecture](https://github.com/jdaun/TIL/blob/master/MOOC/img/c_architecture.PNG)  
@@ -418,7 +421,7 @@ return sum;
 hello()에 대한 정보를 컴파일러에게 알려주기 위해 메인함수 위에 함수원형(함수의 프로토타입)을 적어주어야 한다.  
 이때, 매개변수의 형식과 리턴타입을 포함해준다.  
 
-## 매개변수 있는 함수 만들기
+## 매개변수 있는 함수 만들기 - 함수 호출 방법: 값에 의한 호출(call by value)
 ![매개변수있는함수](https://github.com/jdaun/TIL/blob/master/MOOC/img/function_with_param.PNG)  
 
 add()함수의 지역변수들의 메모리는 함수가 호출되면 생성되고, 종료될때 사라지므로 메모리의 효율성을 알 수 있다.  
@@ -431,5 +434,75 @@ add()함수의 지역변수들의 메모리는 함수가 호출되면 생성되�
   * 프로그램에서 데이터를 저장하는 공간
   * 지역변수: 함수 지역 안에서 선언된 변수는 다른 변수에서 그 내용을 보거나 수정할 수 없음
   
-  
-  
+# WEEK 3-3 함수 호출 방법
+## 성적 처리를 위한 주요 함수 만들기
+* 총점을 반영하여 성적순으로 정렬하는 프로그램을 만들고자 한다. 두가지 함수를 생성한다.
+* 총점 구하기 - add()
+* 정렬을 위해 두 변수의 값을 서로 바꾸는 함수가 필요하다 - swap()
+## 생각하기: 두개의 변수 값을 서로 바꾸려면?
+![swap](https://github.com/jdaun/TIL/blob/master/MOOC/img/swap.PNG)  
+a=10, b=20이 저장되어 있다고 가정할 때, 서로 값을 바꿔 주기 위해 a=b, b=a를 해주게 되면 a에 b값이 들어가는 순간 기존의 a에 저장된 10은 사라져버리기 때문에 b=a=20가 되어 버린다.  
+따라서, 방(temp)을 하나 만들어서  
+1) a의 값을 temp에 넣는다.  
+2) b의 값을 a에 넣는다.
+3) temp의 값을 b에 넣는다.  
+이 순서로 a=20, b=10이 되어 두개의 변수값이 바뀐다.  
+이 알고리즘은 추후 데이터 정렬시에도 기본적으로 많이 적용된다.  
+## 더 생각하기: 다른 함수를 통해서 두 개의 변수 값을 서로 바꾸려면?
+main함수에 있는 변수 두 개의 값을 정렬을 위해 서로 바꾸고 싶은데 자주 사용되는 기능이므로 함수를 만들어서 호출하고 싶다면?  
+* 문제 해결하기  
+main안에 변수 값을 temp변수를 사용하여 서로 변경하면 바뀌지만, 다른 함수로 두 변수 값을 call by  value보내서 바꾼다면 지역변수 특성상 main함수 영역에 있는 변수 값을 두 개 모두 바꿀 수 없다.(return은 1개 값만 가지고 올 수 있으므로)  
+
+따라서 이를 해결하기 위해 나온 것이 call by address이다.
+
+
+## 함수 호출 방법: 주소에 의한 호출(call by address)
+* 해결 방법
+  * main함수에 있는 변수의 조건값을 가지고 swap()함수를 호출하면 swap()함수에서 main함수의 변수 값을 바꿀 수 있음(포인터 변수 사용)
+  * 바꾸기 위해서는 역참조 연산자를 사용해야 함
+* 용어정리
+  * 표인터 변수: 주소를 값으로 가지는 변수  
+  주소값을 저장하기 위해서는 포인터 변수가 필요하다.  
+  * 포인터 변수 선언: int *p, int *q  
+  * 포인터 변수는 주소값만 값으로 가질 수 있음(int *p = &a) //&는 주소를 나타낸다.  
+  P = &a
+  * 역참조 연산자: 포인터 변수 선언 후에 문자 중에 포인터 변수 앞에 *가 오면(*p) 포인터 변수가 가리키는 main변수의 값을 변경할 수 있음  
+  * *두가지 용법    
+  1) 포인터 변수 선언  
+  2) 역참조 선언  
+
+다음은 두개의 변수의 값을 바꾸는 프로그램이다.
+![call_by_reference](https://github.com/jdaun/TIL/blob/master/MOOC/img/call_by_reference.PNG)  
+a와 b의 주소를 swap으로 넘기면 이 정보를 담을 방이 필요하다.  
+따라서, 주소를 값으로 저장할 수 있는 포인터 변수에 저장을 한다.  
+그리고 temp를 선언해서 p가 가리키는 곳(=*p=a)와 q가 가리키는 곳(=*q=b)의 값을 바꿔준다.  
+
+```c
+#include<stdio.h>
+int sum(int a, int b); //함수 원형
+void swap(int *p, int * q) //함수 원형
+int main(void)
+{
+  int a, b, total;
+  printf("Input two integers: ");
+  scanf("%d%d", &a, &b); //10, 20
+  printf("a: %d, b: %d\n", a, b);
+  total = sum(a,b);
+}
+
+int sum(int a, int b){
+  int total;
+  total = a+b;
+  return total;
+}
+
+void swap(int *p, int *q){
+  int temp;
+  temp = *p;
+  *p = *q;
+  *q = temp;
+}
+```   
+
+
+
