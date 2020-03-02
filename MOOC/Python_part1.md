@@ -13,7 +13,7 @@
   
 # Ⅰ. 문제 해결  
 # WEEK 1-1 컴퓨팅 사고력과 문제해결
-이전에 학습한 CT1과 내용이 비슷하므로 생략. [CT1 문서]()에서 확인할 것.
+이전에 학습한 CT1과 내용이 비슷하므로 생략. [CT1 문서](https://github.com/jdaun/TIL/blob/master/MOOC/CS_part1.md#week-1-1-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0problem-solving)에서 확인할 것.
 
 # WEEK 1-2 파이썬 개발환경
 ## 파이썬 설치
