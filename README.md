@@ -31,7 +31,7 @@
   * 컴퓨터개요, 프로그램 주고, 함수, 연산자
 * [컴퓨터공학 입문II](https://github.com/jdaun/TIL/blob/master/MOOC/CS_part2.md)
   * 조건문, 반복문, 파일 입출력, 배열과 구조체
-* [Python 프로그래밍 I]()
+* [Python 프로그래밍 I](https://github.com/jdaun/TIL/blob/master/MOOC/Python_part1.md)
 * [Python 프로그래밍 II]()
 * [특강: AI 입문]()
 ### 책
