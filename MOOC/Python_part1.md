@@ -80,19 +80,19 @@ a=10; b=20
 sum = a + b
 print(a, "+", b, "=", sum)
 ```
-* 동적타이핑(dynamic typing)
-  * 런 타임에 구문을 통해 Data Type을 설정한다.
-* Python에서 변수는 객체를 가리키는 ID값을 담고 있는 저장 공간  
-  * a,b,c,d라는 변수는 저장공간안에 1,2,3,4라는 상수적 객체에 참조(아이디 값을 갖고있음)한다.
-![python_variable](https://github.com/jdaun/TIL/blob/master/MOOC/img/python_variable.PNG)
+* 동적타이핑(dynamic typing)  
+  * 런 타임에 구문을 통해 Data Type을 설정한다.  
+* Python에서 변수는 객체를 가리키는 ID값을 담고 있는 저장 공간   
+  * a,b,c,d라는 변수는 저장공간안에 1,2,3,4라는 상수적 객체에 참조(아이디 값을 갖고있음)한다.  
+![python_variable](https://github.com/jdaun/TIL/blob/master/MOOC/img/python_variable.PNG)  
 ## 변수의 활용
-* 파이썬에서 변수의 데이터 형식은 값을 넣는 순간마다 변경될 수 있는 유연한 구조이다.
-![change_change](https://github.com/jdaun/TIL/blob/master/MOOC/img/python_change.PNG)
-* 변수에는 다른 변수의 값도 저장 가능
-* 문자열, 실수도 마찬가지로 자동으로 데이터타입이 변경된다.
-## 변수 실습
-Q. 변수x와 변수y의 값을 서로 바꾸는 프로그램을 작성 
-* 방법1
+* 파이썬에서 변수의 데이터 형식은 값을 넣는 순간마다 변경될 수 있는 유연한 구조이다.  
+![change_change](https://github.com/jdaun/TIL/blob/master/MOOC/img/python_change.PNG)  
+* 변수에는 다른 변수의 값도 저장 가능  
+* 문자열, 실수도 마찬가지로 자동으로 데이터타입이 변경된다.  
+## 변수 실습  
+Q. 변수x와 변수y의 값을 서로 바꾸는 프로그램을 작성   
+* 방법1  
 ```python
 x = 90
 y = 95
@@ -105,7 +105,7 @@ y=temp
 print(x,y) # 95 90
 ```
 
-* 방법2
+* 방법2  
 ```python
 a = 10
 b = 20
