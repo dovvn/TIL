@@ -13,6 +13,7 @@
 * [Ⅱ. 파이썬 개요](#ⅱ-파이썬-개요)
   * [파이썬 개요](#week-2-1-파이썬-개요)
   * [변수와 메모리](#week-2-2-변수와-메모리)
+  * [입출력함수](#week-2-3-입출력함수)
 # Ⅰ. 문제 해결  
 # WEEK 1-1 컴퓨팅 사고력과 문제해결
 이전에 학습한 CT1과 내용이 비슷하므로 생략. [CT1 문서](https://github.com/jdaun/TIL/blob/master/MOOC/CS_part1.md#week-1-1-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0problem-solving)에서 확인할 것.
@@ -112,3 +113,24 @@ b = 20
 a,b = b,a
 print(a,b) # 20 10
 ```
+
+# WEEK 2-3 입출력함수
+## input(), print()함수
+```python
+x = input("첫번째 정수: ")
+y = input("두번째 정수: ")
+sum = x + y
+print("합은 ", sum)
+```  
+함수 input()을 통해 입력받은 내용의 데이터 타입은 문자열이기 때문에 숫자를 입력하더라도 문자열로 간주되므로 사칙연산이 불가능하다.  
+
+```python
+x = int(input("첫 번째 정수: ")) #int로 바꿔서 x에 넣어라
+y = int(input("두 전째 정수: "))
+
+sum = x + y
+print("합은", sum)
+```  
+
+또는 그대로 코드를 작성한 후 나중에 계산 시 int(x)+int(y)로도 구할 수 있다.  
+
