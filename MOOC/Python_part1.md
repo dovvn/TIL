@@ -214,11 +214,11 @@ else :
 ![윤년_실행결과](https://github.com/jdaun/TIL/blob/master/MOOC/img/yoonnyeon_python.PNG)
 
 # Ⅳ. 제어 문장 1
-# 조건문(if)
+# WEEK 4-1 조건문(if)
 ## 일상 생활 문제: 성적처리
 학생들의 점수를 입력받아 점수에 따라 성적을 산출하는 프로그램  
 ### 문제 해결을 위해 필요한 것들(Computer Thinking)
 * 1.성적자료를 입력 받아 변수에 저장하는 방법
   * 1.변수 선언 (python 101)
   * 2.입력 함수: input함수(int형으로 입력받기)
-\ 강의 듣기 전 먼저 짜보기@@@
+* 2. 점수에 따라 학점을 계산하기 위해서 필요한 연산자
