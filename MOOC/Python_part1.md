@@ -3,8 +3,7 @@
 [Part1강좌](https://github.com/jdaun/TIL/blob/master/MOOC/CS_part1.md)에 선행되는 과정입니다.
 
 # 개요
-컴퓨터를 활용하여 일상 생활에 주어진 문제를 해결할 수 있도록 프로그래밍 기본 원리와 개념을 이해한다.  
-문제 해결을 위해 C 언어로 프로그래밍 언어의 기본 구조와 문법을 알고, 그 문법으로 해결할 수 있는 다양한 일상 생활의 문제를 예제를 통해 학습한다.  
+컴퓨터를 활용(파이썬 프로그래밍)하여 해결하는 능력을 향상하는 것을 목표로 한다.  
 
 # 목차
 * [Ⅰ. 문제 해결](#ⅰ-문제-해결)  
@@ -23,7 +22,7 @@
   
 # Ⅰ. 문제 해결  
 # WEEK 1-1 컴퓨팅 사고력과 문제해결
-이전에 학습한 CT1과 내용이 비슷하므로 생략. [CS_1 문서](https://github.com/jdaun/TIL/blob/master/MOOC/CS_part1.md#week-1-1-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0problem-solving)에서 확인할 것.
+이전에 학습한 CS 1과 내용이 비슷하므로 생략. [CS_1 문서](https://github.com/jdaun/TIL/blob/master/MOOC/CS_part1.md#week-1-1-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0problem-solving)에서 확인할 것.
 
 # WEEK 1-2 파이썬 개발환경
 ## 파이썬 설치
