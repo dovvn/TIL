@@ -1,6 +1,5 @@
 # [MOOC - Python 프로그래밍 Ⅰ](https://pabi.smartlearn.io/courses/course-v1:POSTECH+DSC105+P2001/course/)  
-이 문서는 위 MOOC강의를 듣고 필기용으로 기록되었습니다.  
-[Part1강좌](https://github.com/jdaun/TIL/blob/master/MOOC/CS_part1.md)에 선행되는 과정입니다.
+이 문서는 위 MOOC강의를 듣고 필기용으로 기록되었습니다.
 
 # 개요
 컴퓨터를 활용(파이썬 프로그래밍)하여 해결하는 능력을 향상하는 것을 목표로 한다.  
