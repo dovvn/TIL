@@ -32,7 +32,9 @@
 * [컴퓨터공학 입문II](https://github.com/jdaun/TIL/blob/master/MOOC/CS_part2.md)
   * 조건문, 반복문, 파일 입출력, 배열과 구조체
 * [Python 프로그래밍 I](https://github.com/jdaun/TIL/blob/master/MOOC/Python_part1.md)
-* [Python 프로그래밍 II]()
+  * 문제해결, 파이썬 개요, 연산자, 제어문장1
+* [Python 프로그래밍 II](https://github.com/jdaun/TIL/blob/master/MOOC/Python_part2.md)
+  * 제어문장2, 함수와 모듈, 데이터 구조, 파이썬과 인공지능
 * [특강: AI 입문]()
 ### 책
 * [클라우스 슈밥의 제4차 산업혁명]()
