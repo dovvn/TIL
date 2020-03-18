@@ -279,7 +279,7 @@ else :
 ```
 
 # WEEK 4-2 조건문 실습
-## 일상 생활 문제: 성적처리
+## 1. 일상 생활 문제: 성적처리
 학생들의 점수를 입력받아 점수에 따라 성적을 산출하는 프로그램  
 ## 문제 해결을 위해 필요한 것들(Computer Thinking)
 * 1.성적자료를 입력 받아 변수에 저장하는 방법
@@ -291,12 +291,68 @@ else :
   * 1. 조건 명령어: if else
   * 2. 여러 조건비교 명령어: if elif
 
+```python
+python101 = int(input("파이썬 점수를 입력하세요: "))
+if (python101 >= 90) :
+    print("학점 A")
+elif (python101 >= 80) :
+    print("B")
+elif (python101 >= 70) :
+    print("C")
+elif (python101 >= 60) :
+    print("D")
+elif (python101 >= 50) :
+    print("E")
+else :
+    print("파이썬 프로그래밍 학점은 F입니다.")
+print("수고 많으셨습니다!")
+```
 
+## 2. 가위 바위 보 게임
+P대학교 Y교수는 학생들과 가위, 바위, 보 게임을 만들기 위해 고민하고 있다.  
+학생들이 가위, 바위, 보 게임을 즐길 수 있도록 컴퓨터를 활용하여 해결하고자 한다.
+* 사용자가 가위, 바위, 보 중에서 하나를 선택하고 컴퓨터도 난수로 가위, 바위, 보 중에서 하나를 선택
+* 사용자의 선택과 컴퓨터의 선택을 비교하여서 승패를 화면에 출력
+## 문제 해결을 위해 필요한 것들(Computer Thinking)
+* 1.난수 생성하기
+  * 1.라이브러리 함수 활용(import random)
+* 2. 사용자 선택 변수를 입력 받아 변수에 저장하는 방법
+  * 1.변수 선언(player)
+  * 2.입력함수: input함수
+* 3. 조건에 따라 난수 생성하기
+  * 1.난수 함수 활용(number = random.randint(0,2))
+* 4. 생성된 난수를 활용하여 가위바위보 게임 알고리즘 만들기
+  * 1.게임규칙에 따라 알고리즘 만들기
+  * 2.여러 조건에 따라 수행되는 문장 만들기(if elif)
+ 
+```python
+import random
 
+number = random.randint(0,2)
+player = input("(가위,바위,보)중에서 하나를 선택하세요: ")
+if (number == 0) :
+    computer = "가위"
+elif (number == 1) :
+    computer = "바위"
+else :
+    computer = "보"
+print("사용자: ",player,"컴퓨터: ",computer)
 
-
-
-
-
-
-
+if (player == computer):
+    print("비겼음")
+elif (player == "가위"):
+    if (computer == "바위"):
+        print("컴퓨터가 이김")
+    else:
+        print("사용자가 이김")
+elif (player == "바위"):
+    if (computer == "보"):
+        print("컴퓨터가 이김")
+    else:
+        print("사용자가 이김")
+elif (player == "보"):
+    if (computer == "가위"):
+        print("컴퓨터가 이김")
+    else:
+        print("사용자가 이김")
+ ```
