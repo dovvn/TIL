@@ -117,7 +117,7 @@ for i in range(1, limit+1) :
 print("1부터 ", limit, "가지의 정수의 합= ",sum)
 ```
 실행 결과  
-![정수들의합]()
+![sumofinteger](https://github.com/jdaun/TIL/blob/master/MOOC/img/sumex_python.PNG)  
 
 ## 팩토리얼 계산
 * for문을 이용하여 팩토리얼 계산
@@ -130,28 +130,61 @@ for i in range(1, n+1) :
 print(n,"!은 ", fact, "이다.")
 ```
 실행결과  
-![팩토리얼예제]()
+![팩토리얼예제](https://github.com/jdaun/TIL/blob/master/MOOC/img/factorial_ex.PNG)
 
 ## 자리수의 합
 * 정수 안의 각 자리수의 합을 계산하는 프로그램을 작성
 * 예를 들어서 1234라면 (1+2+3+4)를 계산
 
 실행결과  
-![자리수의 합]()
+![자리수의 합](https://github.com/jdaun/TIL/blob/master/MOOC/img/sumnmb_python.PNG)
 
 ## 숫자 맞추기 게임
 * 컴퓨터가 선택한 숫자를 사용자가 맞추는 게임
 * 입력한 숫자가 선택한 숫자보다 높은 수인지 낮은 수 인지 정보 제공
 * 시도 횟수 제공
+```python
+import random
 
+tries = 0
+number = random.randint(1, 100)
+# print("number값: ",number)
 
+print("1부터 100사이의 숫자를 맞추시오")
 
+while tries < 10:
+    guess = int(input("숫자를 입력하세요: "))
+    print("입력값: ",guess)
+    tries = tries + 1
+    if guess < number:
+        print("더 높게 입력하세요")
+    elif guess > number:
+        print("더 낮게 입력하세요")
+    else:
+        break
+    
+if guess == number:
+        print("축하합니다. 시도 횟수=", tries)
+else:
+    print("정답은", number)
+```
+실행 결과  
+![숫자맞추기](https://github.com/jdaun/TIL/blob/master/MOOC/img/number_python.PNG)
 
-
-
-
-
-
+## 커피 자판기
+```python
+coffee = 10
+money = 300
+while money:
+    print("돈을 받았으니 커피를 줍니다.")
+    coffee = coffee - 1
+    print("남은 커피의 양은 %d개 입니다" %coffee)
+    if not coffee: 
+        print("커피가 다 떨어졌습니다. 판매를 중지합니다.")
+        break
+```
+실행 결과  
+![커피자판기](https://github.com/jdaun/TIL/blob/master/MOOC/img/coffeegame_python.PNG)
 
 
 
