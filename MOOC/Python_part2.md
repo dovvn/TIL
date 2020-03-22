@@ -9,7 +9,8 @@
 * [Ⅴ. 제어 문장 2]()  
   * [반복문]()
   * [반복문 실습]()
-
+* [Ⅵ. 함수와 모듈]()
+  * [함수 모듈]()
   
 # Ⅴ. 제어 문장  
 # WEEK 5-1 반복문 (for, while)
@@ -186,8 +187,77 @@ while money:
 실행 결과  
 ![커피자판기](https://github.com/jdaun/TIL/blob/master/MOOC/img/coffeegame_python.PNG)
 
+# Ⅵ. 함수와 모듈
+# WEEK 6-1 함수 개념
+## 함수
+* 독립적으로 수행하는 프로그램 단위로 특정 작업을 수행하는 명령어들의 모음에 이름을 붙인 것
+## 함수 정의
+* def로 시작하고 클론(:)으로 끝냄
+* 함수의 시작과 끝은 코드의 들여쓰기로 구분
+* 시작과 끝을 명시해 줄 필요가 없음
+```python
+def 함수이름 (입력 인수) :
+    수행할 문장
+    ...
+    return 반환값
+```
+## 함수 정의 문법
+```python
+def 함수이름 (Arguemnt list ...):
+    수행문(statements)
+    return <반환값>
+```
+* 간단한 함수 선언해 보기
+  * 입력 받은 2개의 매개변수(인수)를 서로 더한 값을 리턴
+```python
+def add(a, b):
+    return a+b
+```
+쉘 환경에서 add (10,10) 호출하면 20이 출력된다.  
 
+## 함수 매개변수와 반환 값
+* 입력 값과 반환 값이 없는 함수
+```python
+def say():
+    print("hello")
+```
+* 입력 값은 없고 반환 값이 있는 함수
+```python
+def say():
+   return("hello")
+```
 
+## 함수 작성 예시(1)
+* 정수의 거듭제곱값을 계산하여 반환하는 함수 작성(**연산자 사용가능)
+```python
+def power(x, y):
+    result = 1
+    for i in range(y):
+        result = result * x
+    return result
+
+print(power(10, 2))
+```
+
+## 함수를 이용할 때 주의할 점
+* 파이썬 인터프리터는 함수가 정의되면 함수 안의 문장들은 실행하지 않음
+* 함수 정의가 아닌 문장들은 즉시 실행  
+
+## 함수 작성 예시(2)
+* 정수의 거듭제곱값을 계산하여 반환하는 함수 작성(**연산자 사용가능)
+* main() 함수 호출 활용
+```python
+def main():
+    print(power(10,2))
+
+def power(x, y):
+    result = 1
+    for i in range(y):
+        result = result * x
+    return result
+
+main()
+```
 
 
 
