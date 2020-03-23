@@ -11,6 +11,7 @@
   * [반복문 실습]()
 * [Ⅵ. 함수와 모듈]()
   * [함수 모듈]()
+  * [함수 실습]()
   
 # Ⅴ. 제어 문장  
 # WEEK 5-1 반복문 (for, while)
@@ -258,6 +259,118 @@ def power(x, y):
 
 main()
 ```
+
+# WEEK 6-2 함수 실습
+## 성적처리를 위한 주요 함수 만들기
+* 성적 처리 특성 분석
+  * 총점계산하기 add()
+  * 총점을 사용하여 평균 계산
+  * 총점을 반영하여 성적순으로 정렬
+  * 정렬을 위해서 두 변수의 값을 서로 바꾸는 함수 필요(swap()) => 파이썬에서는 여러 값 리턴 가능
+
+```python
+# 함수
+def add(a,b):
+    return a+b
+
+def swap(a,b):
+    a,b = b,a
+    return a,b
+
+# 시작코드
+a = int(input("정수1 입력: "))
+b = int(input("정수2 입력: "))
+sum = add(a,b)
+average = sum/2
+print("두 수의 합: ", sum)
+print("두 수의 평균: ", average)
+a,b = swap(a,b)
+print("두 수의 교환: ", a, b)
+```
+
+실행 결과  
+![함수실습](https://github.com/jdaun/TIL/blob/master/MOOC/img/ex_function.PNG)
+
+
+# Ⅶ. 데이터 구조 
+# WEEK 7-1 리스트
+## 리스트란?
+* 여러 개의 데이터가 저장되어 있는 장소
+* 선언
+리스트이름 = [값1, 값2, 값3]  
+scores = [32, 56, 64, 72, 12, 37, 98, 77, 59, 69]
+* 리스트를 여러 개의 데이터를 하나의 이름을 관리할 수 있는 데이터 구조
+* ★서로 다른★ 데이터 타입의 데이터를 하나의 리스트 이름으로 관리 가능
+* 문자열을 원소로 가지는 예제  
+>>> fruit = ["banana", "apple", "cherry"]
+* 숫자를 원소로 가지는 예제
+>>> score = [70, 99, 25, 100]
+* Empty list
+>>> empty_list = []
+## 리스트 원소에 접근 하기
+* 인덱스
+  * 원소가 배열된 순서를 나타냄. (0번 부터 시작)
+  * 인덱스를 이용하여 원소에 접근할 수 있음
+  >>> season[1]
+## 리스트와 연산자
+* in: list의 element인가를 결정하는 연산자
+* not in: list의 element가 아닌 element를 결정하는 연산자
+```python
+fruit = ["banana", "apple", "cherry"]
+"apple" in fruit #true
+```
+## 리스트 순회하기
+```python
+scores = [32, 56, 64, 72, 12, 37]
+for element in scores:
+    print(element, end=' ') # 32 56 64 72 37
+```
+## 리스트 사용가능 함수
+![리스트 사용가능 함수](https://github.com/jdaun/TIL/blob/master/MOOC/img/list_function.PNG)
+## 예제: 성적 처리 프로그램
+* 학생들의 성적을 받아서 리스트에 저장
+* 성적의 평균을 구하고 80점 이상 성적을 받은 학생의 숫자를 계산하여 출력
+```python
+students = 5
+
+scores = []
+scoreSum = 0
+
+for i in range(students):
+    value = int(input("성적을 입력하세요: "))
+    scores.append(value) #리스트에 값을 추가
+    scoreSum += value
+
+scoreAvg = scoreSum / len(scores)
+highScoreStudents = 0
+for i in range(len(scores)):
+    if scores[i] >= 80:
+        highScoreStudents += 1
+
+print("성적 평균은", scoreAvg, "입니다")
+print("80점 이상 성적을 받은 학생은", highScoreStudents, "명입니다.")
+```
+실행 결과  
+![성적처리프로그램](https://github.com/jdaun/TIL/blob/master/MOOC/img/ex_list1.PNG)
+
+## 문자열 처리 프로그램
+* 리스트는 문자열도 저장 가능
+* 학생들의 이름을 저장하였다가 출력하는 프로그램을 작성
+```python
+Names = []
+while True:
+    name = input("학생 이름을 입력하세요: ")
+    if name == "" :
+        break
+    Names.append(name)
+
+print("학생 이름:")
+for name in Names:
+    print(name, end=", ")
+```
+
+![실행결과](https://github.com/jdaun/TIL/blob/master/MOOC/img/list_ex2.PNG)
+
 
 
 
