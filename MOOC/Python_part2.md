@@ -12,7 +12,10 @@
 * [Ⅵ. 함수와 모듈]()
   * [함수 모듈]()
   * [함수 실습]()
-  
+* [Ⅶ. 데이터 구조]()
+  * [리스트]()
+  * [데이터 구조]()
+
 # Ⅴ. 제어 문장  
 # WEEK 5-1 반복문 (for, while)
 ## for
@@ -302,11 +305,17 @@ scores = [32, 56, 64, 72, 12, 37, 98, 77, 59, 69]
 * 리스트를 여러 개의 데이터를 하나의 이름을 관리할 수 있는 데이터 구조
 * ★서로 다른★ 데이터 타입의 데이터를 하나의 리스트 이름으로 관리 가능
 * 문자열을 원소로 가지는 예제  
->>> fruit = ["banana", "apple", "cherry"]
+```python
+fruit = ["banana", "apple", "cherry"]
+```
 * 숫자를 원소로 가지는 예제
->>> score = [70, 99, 25, 100]
+```python
+score = [70, 99, 25, 100]
+
 * Empty list
->>> empty_list = []
+```python
+empty_list = []
+```
 ## 리스트 원소에 접근 하기
 * 인덱스
   * 원소가 배열된 순서를 나타냄. (0번 부터 시작)
@@ -371,7 +380,104 @@ for name in Names:
 
 ![실행결과](https://github.com/jdaun/TIL/blob/master/MOOC/img/list_ex2.PNG)
 
+# WEEK 7-2 데이터 구조
+## 데이터구조란?
+* 프로그램에서 자료들을 저장하는 여러가지 구조들이 있다. 이를 자료구조라한다.
+* 파이썬에는 리스트, 튜플, 딕셔너리, 문자열 등 다양한 데이터 구조를 기본으로 사용할 수 있도록 제공한다.
+## 리스트 예제: 연락처 관리 프로그램
+```python
+menu = 0
+friends = []
+while menu != 9:
+    print("----------------");
+    print("1. 친구 리스트 출력")
+    print("2. 친구추가")
+    print("3. 친구삭제")
+    print("4. 이름변경")
+    print("9. 종료 ")
+    menu = int(input("메뉴를 선택하시오: "))
+    if menu == 1:
+        print(friends)
+    elif menu == 2:
+        name = input("이름을 입력하시오: ")
+        friends.append(name)
+    elif menu == 3:
+        del_name = input("삭제하고 싶은 이름을 입력하시오: ")
+        if del_name in friends:
+            friends.remove(del_name)
+        else:
+            print("이름이 발견되지 않았음")
+    elif menu == 4:
+        old_name = input("변경하고 싶은 이름을 입력하시오: ")
+        if old_name in friends:
+            index = friends.index(old_name)
+            new_name = input("새로운 이름을 입력하세요")
+            friends[index] = new_name
+        else:
+            print("이름이 발견되지 않았음")
+        
+```
+![리스트예제](https://github.com/jdaun/TIL/blob/master/MOOC/img/datalist_python.PNG)
+## 튜플
+* 튜플(tuple)은 값을 변경할 수 없는 리스트
+* 튜플 = (항목1, 항목2, ..., 항목n)
+```python
+colors = ("red, "yello" blue")
+t1 = (1, 2, 3, 4, 5)
+t = numbers + colors # (1, 2, 3, 4, 5, "red, "yello" blue")
+```
+## 딕셔너리
+* 딕셔너리는 키(key)와 값(value)의 쌍을 저장할 수 있는 객체
+* 딕셔너리 = {키1:값1, 키2:값2, 키3:값3...}
+```python
+contacts = {'kim' : '01012345678', 'Park':'0123456789'}
+contacts['kim'] # '01012345678
+contacts.get('Kim') # '01012345678
 
+if "Kim" in contacts:
+    print("키가 딕셔너리에 있음")
+```
+## 항목 순회하기
+```python
+scores = {'Korean' : 80, 'Math' : 90, 'English' : 80}
+for item in scores.items():
+    print(item)
+# 출력 결과
+# ('Korean', 80)
+# ('Math', 90)
+# ('English', 80)
+```
+## 문자열
+* 문자열은 문자들의 시퀀스로 정의
+* 글자들이 실(string)로 묶여 있는 것이 문자열
 
+```python
+s1 = str("Hello")
+s2 = "world"
+s3 = s1 + s2 #Helloworld
+```
+## 개별 문자 접근하기
+```python
+word = 'abcdef'
+word[0] #a
+```
+## 슬라이싱
+```python
+word = 'Python'
+word[0:2] #0부터 2보다 작을때 까지 => Py
+word[2:5] # tho
+```
+## in연산자와 not in 연산자
+```python
+s = "Love will find a way."
+"Love" in s #True
+```
 
+```python
+s = input("문자열을 입력하세요")
+if 'c' in s:
+    print('c가 포함되어 있음')
+else:
+    print('포함되어 있지 않음')
+```
 
