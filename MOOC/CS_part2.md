@@ -10,8 +10,8 @@
 * [Ⅴ. 조건문](https://github.com/jdaun/TIL/blob/master/MOOC/CS_part2.md#%E2%85%B4-%EC%A1%B0%EA%B1%B4%EB%AC%B8)
   * [조건문(if)과 문제해결 예제(성적처리)]()
   * [조건문(switch)과 문제해결 예제(윤년계산)]()
-* [Ⅵ. 반복문]
-  * [반복문(for)]
+* [Ⅵ. 반복문]()
+  * [반복문(for)]()
   
 # Ⅴ. 조건문 
 # WEEK 5-1 조건문(if)과 문제해결 예제(성적처리)
