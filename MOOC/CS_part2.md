@@ -10,6 +10,8 @@
 * [Ⅴ. 조건문](https://github.com/jdaun/TIL/blob/master/MOOC/CS_part2.md#%E2%85%B4-%EC%A1%B0%EA%B1%B4%EB%AC%B8)
   * [조건문(if)과 문제해결 예제(성적처리)]()
   * [조건문(switch)과 문제해결 예제(윤년계산)]()
+* [Ⅵ. 반복문]
+  * [반복문(for)]
   
 # Ⅴ. 조건문 
 # WEEK 5-1 조건문(if)과 문제해결 예제(성적처리)
@@ -137,6 +139,115 @@ switch(month){
 	return 0;
 }
 ```
+
+# Ⅵ. 반복문
+# WEEK 6-1 반복문(for)
+## 프로그램의 흐름 제어: 제어문
+* 순차: 위에서 아래로 한 문장씩 순차적으로 수행
+* 선택: 조건에 따라 흐름 제어~조건문
+* 반복: 조건에 따라 반복 수행~반복문
+* 분기: 정해진 위치로 이동~분기문
+
+## 제어문의 종류
+* 조건문: 조건에 따라 프로그램의 흐름을 제어하는 명령문
+  * if, if-else
+  * switch-case
+* 반복문: 조건에 따라 정해진 문장을 반복 수행하는 명령문
+  * for
+  * while, do-while
+* 분기문(Jump Statements): 명령어를 만나면 정해진 곳으로 점프
+  * goto, return, break, continue
+
+## 키워드(Keyword)(1983 ANSI C)
+* 약속된 의미의 단어(32개)
+* 키워드는 약속된 의미로만 사용(데이터 타입, 제어 명령 등)
+* 키워드는 식별자(변수명)로 사용할 수 없음
+![c_keyword](https://github.com/jdaun/TIL/blob/master/MOOC/img/c_keyword.PNG)
+
+## 반복문 종류
+* for: 일정한 반복 횟수를 이용하는 반복문에 적합
+```c
+for(초기화; 조건검사; 증감연산){
+   for문 몸체(body);
+}
+```
+* while: 구문이 간단하며, 검사 부분이 처음에 있음
+```c
+while(조건검사){
+   while문 몸체(body);
+}
+```
+* do while: 반복 몸체를 1번은 실행하며, 검사 부분이 뒤에 있음
+do{
+   do while문 몸체(body);
+}while(조건검사);
+
+## 반복문(for)
+* 1부터 777까지의 합 구하기
+```c
+#include <stdio.h>
+
+int main(void) {
+	int i, sum;
+	sum = 0; //지역변수 초기화
+	for(int i=1; i<=777; i++){
+		sum+=i;
+	}
+	printf("1부터 777까지의 합: %d \n", sum);
+	return 0;
+}
+```
+
+## 일상 생활 문제: 성적처리(반복문for활용)
+* 수강인원을 입력받고, 학생 각각의 학번과 점수를 입력받아 점수에 따라 학점을 산출하고 평균을 구한다.
+* 입력 설계
+  * 1.수강인원을 입력
+  * 2.학번과 점수를 입력
+* 출력 설계
+  * 1.학점을 산출
+  // if, else if, 학생수 만큼 반복 for  
+  * 2.과목평균
+  // 입력된 핛갱들의 점수 총점으로 평균 산출  
+```c
+#include <stdio.h>
+
+int main(void) {
+	int i, stuNum, stuID, csed101;
+	char grade;
+	float total = 0;
+	print("*** 컴퓨터공학입문 성적 ***\n");
+	print("수강인원을 입력하세요: ");
+	scanf("%d", &stuNum);
+	for(i=0; i<stuNum; i++){
+		print("학번과 점수를 순서대로 입력하세요: ");
+		scanf("%d%d", &stuID, &csed101);
+		total += csed101; //total = total + csed101
+		if (csed101 >= 90)
+			grade = 'A';
+		else if(csed101 >= 80)
+			grade = 'B';
+		else if(csed101 >= 70)
+			grade = 'C';
+		else if(csed101 >= 60)
+			grade = 'D';
+		else
+			grade = 'F';
+		print("학번: %d, 학점: %c\n", stuID, grade);
+	}
+	print("과목 평균: %5.2f\n", total/stuNum);
+	return 0;
+}
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
