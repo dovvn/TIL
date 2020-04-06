@@ -12,6 +12,7 @@
   * [조건문(switch)과 문제해결 예제(윤년계산)]()
 * [Ⅵ. 반복문]()
   * [반복문(for)]()
+  * [반복문(while, do while)]()
   
 # Ⅴ. 조건문 
 # WEEK 5-1 조건문(if)과 문제해결 예제(성적처리)
@@ -236,6 +237,32 @@ int main(void) {
 	}
 	print("과목 평균: %5.2f\n", total/stuNum);
 	return 0;
+}
+```
+
+# WEEK 6-2 반복문(while, do while)
+## while, do-while
+* 조건을 만족하는 동안 특정 작업을 반복하여 처리함.
+* while문의 경우 조건이 거짓인 경우 조건문을 한번도 하지 않는 경우도 있지만, do-while은 반드시 한번은 조건문을 수행한다.
+## while과 for문의 관계
+* while
+```c
+int sum = 0;
+int i = 1;
+
+while(i<=10){
+   sum+=i;
+   i++;
+}
+```
+
+* for문
+```c
+int sum = 0;
+int i;
+
+for(i=1; i<=10; i++){
+   sum+=i;
 }
 ```
 
