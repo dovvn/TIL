@@ -303,11 +303,96 @@ for(i=1; i<=10; i++){
 
 # WEEK 7-2 파일 입출력과 함수 예제 실습
 * 성적처리 main()
-```c
+intput.txt파일을 미리 생성한다.  
 
+```c
+#include <stdio.h>
+
+int getStu(FILE* spStu, int* stuID, int* exam1, int* exam2, int* final);
+void calcGrade(int exam1, int exam2, int final, int* avrg, char* grade);
+void writeStu(FILE* spGrades, int stuID, int avrg, char grade);
+
+int main(void){
+	FILE* spStu; //입력파일 주소 저장 
+	FILE* spGrades; //출력 파일 주소 저장 
+	
+	int stuID, exam1, exam2, final; //학번, 과제1, 과제2, 기말 
+	int avrg; //평균 
+	char grade; //학점
+	
+	printf("Begin Student grading\n");
+
+	//파일 읽기 모드 열기 
+	if(!(spStu = fopen("input.txt", "r"))){
+		{//error 
+			printf("파일 열기 error\n");
+			return 100;
+		}
+	}
+	//출력파 
+	if(!(spGrades = fopen("output.txt", "w"))){
+		{//error 
+			printf("파일 열기 error\n");
+			return 102;
+		}
+	}
+	
+	//입력 데이터 여러줄 처리 
+	while(getStu(spStu, &stuID, &exam1, &exam2, &final)){
+		calcGrade(exam1, exam2, final, &avrg, &grade);
+		writeStu(spGrades, stuID, avrg, grade);
+	}
+	
+	fclose(spStu);
+	fclose(spGrades);
+	printf("End Student grading\n");
+	return 0;
+}
+
+//데이터입력 
+int getStu(FILE* spStu, int* stuID, int* exam1, int* exam2, int* final){
+	int ioResult;
+	
+	//데이터를 파일로부터 받아 main영역에 저장 
+	ioResult = fscanf(spStu, "%d%d%d%d", stuID, exam1, exam2, final); //파일 연결, 입력받을 데이터 만큼(int형4개)
+	
+	if(ioResult == EOF) //End Of File 파일의 끝 확인 
+		return 0;
+	else if (ioResult != 4){
+		printf("Error Reading\n");
+		return 0;
+	}
+	else
+		return 1;
+}
+
+//성적계산 
+void calcGrade(int exam1, int exam2, int final, int* avrg, char* grade){
+	*avrg = (exam1 + exam2 + final) / 3;
+	
+	if(*avrg >= 90) //평균값을 사용하여 학점 계산
+		*grade = 'A';
+	else if(*avrg >= 80)
+		*grade = 'B';
+	else if(*avrg >= 70)
+		*grade = 'C';
+	else if(*avrg >= 60)
+		*grade = 'D';
+	else
+		*grade = 'F';		
+}
+
+//성적 출력
+void writeStu(FILE* spGrades, int stuID, int avrg, char grade){
+	//output.txt 파일로 실행 결과 출력, 모니터에는 나오지 않음
+	fprintf(spGrades, "%04d %d %c\n", stuID, avrg, grade); //output.txt 주소 저장, %04d: 4개의 칸에 학점 출력  
+}
 ```
 
+output.txt의 실행결과   
+![result_output](https://github.com/jdaun/TIL/blob/master/MOOC/img/result_output.PNG)  
 
+여기서 output 프로그램은 실행 전 만들지 않고 프로그램 실행 후 자동 생성됨을 알 수 있다.  
 
 
 
