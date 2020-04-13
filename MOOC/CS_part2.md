@@ -16,7 +16,9 @@
 * [Ⅶ. 파일 입출력]()
   * [파일 입출력과 함수]()
   * [파일 입출력과 함수 예제 실습]()
-  
+* [Ⅷ. 배열과 구조체]()
+  * [배열과 함수]()
+
 # Ⅴ. 조건문 
 # WEEK 5-1 조건문(if)과 문제해결 예제(성적처리)
 ## 조건문(if)
@@ -393,6 +395,120 @@ output.txt의 실행결과
 ![result_output](https://github.com/jdaun/TIL/blob/master/MOOC/img/result_output.PNG)  
 
 여기서 output 프로그램은 실행 전 만들지 않고 프로그램 실행 후 자동 생성됨을 알 수 있다.  
+
+
+# Ⅷ. 배열과 구조체
+# WEEK 8-1 배열과 함수
+## 배열(arrays)
+* 동일한 자료형의 데이터가 여러 개 연속적으로 저장되어 있는 데이터 저장 장소  
+* int score[5];
+## 배열의 초기화
+* 1.초기화
+  * int score[5] = {90, 80, 70, 60, 50};
+* 2 배열의 크기 없이 초기화
+  * int score[] = {90, 80, 70, 69, 50};
+  * 자동적으로 초기값의 원소 개수 만큼 배열 크기로 생성
+* 3.일부만 초기화
+  * int score[5] = {90, 80};
+  * 나머지 원소들은 0으로 초기화
+* 4.0으로 초기화
+  * int score[5]={0};
+ ## 배열 선언과 메모리
+ ![c_array](https://github.com/jdaun/TIL/blob/master/MOOC/img/c_array.PNG)  
+ * 배열이 선언되면 배열명을 시작주소로 연속된 메모리공간(5개)이 만들어짐
+ * 연속된 공간에 저장이 되어 있으므로 원소명으로 원소(데이터)에 접근하거나 포인터(주소)를 사용하여 원소에 접근하여 값을 읽거나 변경 가능 
+ * 배열명: 배열 시작 주소(주소 상수)
+ * a == &a[0] //배열 시작 주소
+ * a+1 == &a[1] //a[1]원소의 주소, 여기서 주소에 +1은 그 다음 칸 주소를 의미함
+ * *(a+2) = 70; //a+2주소에 역참조연산자 이용하여 원소값 변경 가능
+ ```c
+ #include <stdio.h>
+
+int main(void){
+	int score[5] = {10, 20, 30, 40, 50};
+	int i, n, sum = 0;
+	n = sizeof(score)/sizeof(int); //array 수
+	
+	printf("\n ** score 배열 **\n");
+	for(i=0; i<n; i++)
+		printf("score[%d] : %d\n", i, score[i]); //array 원소 값 
+		
+	printf("\n ** score 배열 주소 **\n");
+	for(i=0; i<n; i++){
+		printf("&score[%d]: %d\n", i, &score[i]); //array 원소 주소값 
+	}
+	for(i=0; i<n; i++)
+		sum += score[i];
+	printf("\n 배열 합: %4d\n", sum);
+	return 0;
+} 
+```
+실행 결과  
+![c_ex1](https://github.com/jdaun/TIL/blob/master/MOOC/img/c_ex1.PNG)
+
+## 함수를 이용한 배열의 합 구하기 문제
+* main함수에 x배열, y배열을 서언하고 x배열과 y배열의 각각 원소를 더하여 xysum배열에 결과를 저장하고 출력하는 프로그램을 작성하시오.(단, xysum배열의 연산은 add_arrays함수를 만들어서 처리하시오.)
+* 위의 예제의 score배열을 x라 하고, 새로운 y배열을 만들어서 각각 원소를 더해준다.
+```c
+#include <stdio.h>
+
+int main(void){
+	int x[5] = {10, 20, 30, 40, 50};
+	int y[5] = {45, 55, 33, 28, 35};
+	int xysum[5]={0};
+	int i, n, sum = 0;
+	
+	n = sizeof(x)/sizeof(int); //array 수
+	printf("배열 원소의 개수: %d개", n);
+	
+	printf("\n ** x 배열 **\n");
+	for(i=0; i<n; i++)
+		printf("x[%d] : %d\n", i, x[i]); //array 원소 값 
+		
+	printf("\n ** x 배열 주소 **\n");
+	for(i=0; i<n; i++){
+		printf("&x[%d]: %d\n", i, &x[i]); //array 원소 주소값 
+	}
+	for(i=0; i<n; i++)
+		sum += x[i];
+	printf("\n 배열 합: %4d\n", sum);
+		
+	printf("\n ** y배열 **\n");
+	for(i=0; i<n; i++)
+		printf("y[%d] : %d\n", i, y[i]); //array 원소 값 
+	
+	add_arrays(x, y, xysum, n);
+	
+	printf("\n x + y 결과 출력\n");
+	add_arrays(x, y, xysum, n);
+	for(i=0; i<n; i++){
+		printf("%3d", xysum[i]);
+	}
+	return 0;
+}
+
+int add_arrays(const int a[], const int b[], int absum[], int n){ //const원본 배열 변경x 
+	int i;
+	for(i=0; i<n; i++){
+		absum[i] = a[i] + b[i];
+	}
+}
+```
+* 여기서, 매개변수에서 배열형식[]으로 받아줄 경우, 포인터 *를 쓰지 않아도 []연산자를 사용하여 원본의 배열을 직접 접근하여 읽거나 쓸 수 있는 기능을 제공함. 원본 배열의 값이 쉽게 바뀔 수 있으므로 const 사용하여 제어 권장.
+
+실행 결과  
+![c_ex2](https://github.com/jdaun/TIL/blob/master/MOOC/img/c_ex2.PNG)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
