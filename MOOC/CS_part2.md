@@ -18,7 +18,8 @@
   * [파일 입출력과 함수 예제 실습]()
 * [Ⅷ. 배열과 구조체]()
   * [배열과 함수]()
-
+  * [배열과 구조체]()
+  
 # Ⅴ. 조건문 
 # WEEK 5-1 조건문(if)과 문제해결 예제(성적처리)
 ## 조건문(if)
@@ -498,6 +499,154 @@ int add_arrays(const int a[], const int b[], int absum[], int n){ //const원본 
 
 실행 결과  
 ![c_ex2](https://github.com/jdaun/TIL/blob/master/MOOC/img/c_ex2.PNG)
+
+
+# WEEK 8-2 배열과 구조체
+## 사용자 정의 자료형(User-defined data types)
+* 기본 자료형
+  * 프로그래밍 언어에서 기본적으로 제공하는 자료형
+  * int, float ,double, char 등
+* 사용자 정의 자료형
+  * 일상생활에 다양한 형태의 문제를 해결하기 위해서는 기본 자료형만으로는 자료의 선언과 저장에 한계가 있으므로, 해결하려는 문제와 가장 가까운 자료구조를 사용자(프로그래머)가 직접 자료형으로 만들어서 문제를 해결할 수 있는 자료형
+  * 구조체: struct
+## 구조체(structure)란?
+* 구조체의 필요성
+  * 동일한 자료형의 데이터가 여러개 필요한 경우 배열을 사용하여 처리할 수 있지만, 성적처리와 같이 학번, 점수, 학점 등 서로 다른 자료형을 가진 데이터를 함께 저장하고 처리하기 위해서는 새로운 자료형 필요
+  * 다양한 자료형을 가진 연관된 데이터를 묶어서 자료형을 만들고, 그 자료형을 사용하여 변수를 선언하며 데이터를 관리하는 것이 필요 => 구조체
+* 구조체 정의
+  * 다양한 자료형의 연관된 데이터를 묶어서 선언할 수 있도록 사용자 정의 자료형을 만드는 것
+  * 템플릿(template)과 같은 역할을 하며, 구조체 정의는 메모리에 변수를 생성하지 않음
+```c
+struct stu //자료형 이름
+    {
+      int ID;
+      float kor, eng, math;
+      float avg;
+      char grade;
+    }
+```
+* 구조체 변수 선언
+  * 구조체 정의 후, 구조체 자료형을 사용하여 변수를 선언
+  * 구조체 변수를 선언하면 구조체 멤버의 크기 만큼 메모리에 할당
+```c  
+struct stu //구조체 정의  
+    {
+      int ID;
+      float kor, eng, math;
+      float avg;
+      char grade;
+    }
+
+struct stu s1 //구조체 변수 선언  
+```  
+
+```c
+struct stu //구조체 정의  
+    {
+      int ID;
+      float kor, eng, math;
+      float avg;
+      char grade;
+    }
+
+typedef struct stu stu; //타입 이름 변경
+stu s1 //구조체 변수 선언
+```  
+* 구조체 변수 멤버 참조 연산자
+```c
+struct stu //구조체 정의  
+    {
+      int ID;
+      float kor, eng, math;
+      float avg;
+      char grade;
+    }
+
+struct stu s1 = {10001, 99.5, 88.7, 77.9}; //구조체 변수 선언
+strcut stu s2; //구조체 변수 선언
+
+s2.ID = 1001; //.연산자를 사용하여 구조체 멤버에 접근
+s2.kor = 90.5
+s2.eng = 80.3
+s2.math = 95.4
+```
+* 구조체 배열 선언
+```c
+struct stu //구조체 정의  
+    {
+      int ID;
+      float kor, eng, math;
+      float avg;
+      char grade;
+    }
+ 
+struct stu s[3]; //구조체 배열 선언
+
+s[0].ID = 10001; //.연산자를 사용하여 구조체 멤버에 접근
+s[0].kor = 90.5;
+s[0].eng = 80.3;
+s[0].math = 95.4;
+```
+* 구조체 배열 출력 예제
+```c
+#include <stdio.h>
+#define MAX 3
+// 구조체 정의(사용자 정의 자료형 만들기)
+struct stu{
+	int ID;
+	float kor, eng, math;
+	float avg;
+	char grade;
+};
+
+int main(void){
+	struct stu s[MAX]; //구조체 변수(배열)선언
+	int i, j, korsum = 0, engsum = 0, mathsum = 0; //변수 선언
+	
+	printf("학번, 점수(국어,영어,수학)을 입력하세요.)\n");
+	for(i=0; i<MAX; i++)
+		scanf("%d %f %f %f", &s[i].ID, &s[i].kor, &s[i].eng, &s[i].math);
+
+	printf("\n입력된 점수\n");	
+	for(i=0; i<MAX; i++)
+		printf("%d %5.2f %5.2f %5.2f\n", s[i].ID, s[i].kor, s[i].eng, s[i].math);
+	
+	//평균 계산
+	for(i=0; i<MAX; i++){
+		s[i].avg = (s[i].kor + s[i].eng + s[i].math)/ 3.0; 
+		korsum += s[i].kor;
+		engsum += s[i].eng;
+		mathsum += s[i].math;
+	} 
+	
+	//학점 계산
+	for(i=0; i<MAX; i++){
+		if(s[i].avg >= 90)
+			s[i].grade = 'A';
+		else if(s[i].avg >= 80)
+			s[i].grade = 'B';
+		else if(s[i].avg >= 70)
+			s[i].grade = 'C';
+		else if(s[i].avg >= 60)
+			s[i].grade = 'D';
+		else
+		    s[i].grade = 'F';			
+	}
+	
+	printf("\n ** 성적 ** \n"); //학번, 평균, 학점 출력
+	for(i=0; i<MAX; i++)
+		printf("학번: %5d\t평균:%5.2f\t학점:%c\n", s[i].ID, s[i].avg, s[i].grade);
+	
+	printf("\n ** 과목별 평균 *\n");
+	printf("국어: %5.2f 영어: %5.2f 수학: %5.2f\n", korsum/3.0, engsum/3.0, mathsum/3.0);
+	return 0;
+} 
+```
+
+실행결과  
+![c_struct_ex](https://github.com/jdaun/TIL/blob/master/MOOC/img/c_strcut_ex.PNG)  
+
+
 
 
 
