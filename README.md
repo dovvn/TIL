@@ -16,12 +16,12 @@
 
 ## 분류
 ### Information
-* [웹 프론트엔드]  
+* 웹 프론트엔드 
   * [프론트엔드 마스터가 되고싶다면 알아야 할 프로젝트 9선](https://github.com/jdaun/TIL/blob/master/Information/Web-front-end/9projectsforMaster.md)
 * [Android]
   * 
 ### C
-* [C 실습]
+* C 실습
   * [포인터로 버블 정렬 함수 만들기](https://github.com/jdaun/TIL/blob/master/C/c_ex/bubblesort.md)
   * [삽입정렬 만들기](https://github.com/jdaun/TIL/blob/master/C/c_ex/insertsort.md)
   
