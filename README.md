@@ -18,8 +18,7 @@
 ### Information
 * 웹 프론트엔드 
   * [프론트엔드 마스터가 되고싶다면 알아야 할 프로젝트 9선](https://github.com/jdaun/TIL/blob/master/Information/Web-front-end/9projectsforMaster.md)
-* [Android]
-  * 
+
 ### C
 * C 실습
   * [포인터로 버블 정렬 함수 만들기](https://github.com/jdaun/TIL/blob/master/C/c_ex/bubblesort.md)
@@ -41,15 +40,4 @@
   * 제어문장2, 함수와 모듈, 데이터 구조, 파이썬과 인공지능
 * [특강: AI 입문]()
 ### 책
-* [클라우스 슈밥의 제4차 산업혁명]()
-* [가장 쉬운 AI(인공지능)]()
-### 영상
-* The Age of AI - YouTube
-  * [E1 - 적정선은 어디인가?]()
-  * [E2 - A.I를 통한 치유]()
-  * [E3 - A.I를 이용해 더 나은 인간 만들기]()
-  * [E4 - 사랑, 예술 그리고 이야기를 이해하다]()
-  * [E5 - 화성의 '우주 건축가들'](https://github.com/jdaun/TIL/blob/master/Video/TheAgeofAI_E5.md)
-  * [E6 - 로봇이 내 일자리를 빼앗을까?]()
-  * [E7 - 한 번에 알고리즘 하나로 세상을 구하기]()
-  * [E8 - AI가 외계인을 찾는 방식]()
+* 클라우스 슈밥의 제4차 산업혁명(예정)
