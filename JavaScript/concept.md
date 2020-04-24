@@ -134,6 +134,21 @@ var man={name:"홍길동", age:20, height:180};
 console.log(man.name);
 console.log(man[name]);
 ````
+
+```javascript
+var 다운 = {
+    이름 : '다운',
+    나이 : 25,
+    성격 : '온화함',
+    먹다 : function 먹다(){
+        console.log("과자를 먹다")
+    },
+}
+
+var 값 = '이름'
+다운.값 // X
+다운[값] //'다운'출력
+```
 * 속성 값 변경은 속성에 접근해서 변수에 값을 저장하듯이 하면 된다.
 
 # undefined와 null
@@ -409,6 +424,6 @@ var counter2 = makeCounterFunction(10);
  * 환경 : var count = 10;  
 
 # 마무리하며
-_(20-01-12 최종 업뎃)_  
+_(20-01-12)_  
 this,클로저는 생소한 개념으로 더 깊이 있는 학습과 실습이 필요한 것 같다.  
 이후, react나 node.js를 이용한 간단한 프로젝트를 만들어 보도록 하자.
