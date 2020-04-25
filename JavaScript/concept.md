@@ -294,6 +294,19 @@ for(var star = 5; star >= 1; star--){
 * 대괄호 안에 인덱스를 사용 : arr[index]
   * arr[0] = 1
   * console.log(arr[arr.length-1]);
+  
+### 배열과 배열객체 구분하기
+Array.isArray()를 사용하여 판별한다.
+```javascript
+var 배열 = ['사과', '오렌지', '포도']
+var 배열같은객체 = {
+    0: '고양이',
+    1: '토끼',
+    2: '강아지',
+}
+Array.isArray(배열) //true
+Array.isArray(배열같은객체) //false
+```
 
 # 배열 사용하기
 ## 배열에 엘리먼트 추가/삭제하기
