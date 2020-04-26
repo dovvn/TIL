@@ -166,6 +166,31 @@ var 값 = '이름'
 * 객체의 속성을 비울때 사용
   * typeof의 결과는 object이며 값은 null
   
+## window객체
+window는 브라우저, document는 페이지(탭)라고 생각하자
+```javascript
+window.alert() //window객체 생략 가능
+window.open()
+```
+window는 전역객체로 모든 곳에서 접근 가능하다. 따라서 생략 가능함.
+```javascript
+var 이름 = 'daun'
+window.이름 //daun
+```
+전역변수는 전역객체의 속성이 된다. (함수 바깥)  
+함수안에 변수가 들어 있을 때는 window에 등록 안됨  
+전역변수와 함수 안의 변수가 다른 이유는 함수의 특수성(함수 스코프) 때문  
+
+## document객체와 DOM
+html과 javascript의 통역사 역할  
+html요소에 접근하고자 할 때는 반드시 document객체 부터 시작해야 한다.
+
+```javascript
+console.dir(document)
+```
+console.dir로 객체 형식을 볼 수 있다
+
+
 # 산술연산자
 ## 이항연산자
 두개의 피연산자(A,B)를 가지는 연산자.  
