@@ -25,11 +25,11 @@
   * [삽입정렬 만들기](https://github.com/jdaun/TIL/blob/master/C/c_ex/insertsort.md)
   
 ### JavaScript
-* [JavaScript 이론](https://github.com/jdaun/TIL/blob/master/JavaScript/concept.md)
+* [JS 이론](https://github.com/jdaun/TIL/blob/master/JavaScript/concept.md)
+* [JS 실습](https://github.com/jdaun/TIL/blob/master/JavaScript/jsExample.md)
 * React.js
   * [누구든지 하는 리액트: 초심자를 위한 react 핵심 강좌](https://github.com/jdaun/TIL/blob/master/JavaScript/Reactpoint.md)
 ### MOOC
-* [Computational Thinking (컴퓨팅 사고) Ⅰ]()
 * [컴퓨터공학 입문I (C언어)](https://github.com/jdaun/TIL/blob/master/MOOC/CS_part1.md)
   * 컴퓨터개요, 프로그램 주고, 함수, 연산자
 * [컴퓨터공학 입문II (C언어)](https://github.com/jdaun/TIL/blob/master/MOOC/CS_part2.md)
@@ -38,6 +38,5 @@
   * 문제해결, 파이썬 개요, 연산자, 제어문장1
 * [Python 프로그래밍 II](https://github.com/jdaun/TIL/blob/master/MOOC/Python_part2.md)
   * 제어문장2, 함수와 모듈, 데이터 구조, 파이썬과 인공지능
-* [특강: AI 입문]()
 ### 책
 * 클라우스 슈밥의 제4차 산업혁명(예정)
