@@ -29,7 +29,8 @@
 * [for문](#for문)  
 * [변수의 Scope](#변수의-scope)  
 * [method, this](#method-this)  
-* [클로저(closure)](#클로저closure)  
+* [클로저(closure)](#클로저closure)
+* [동기와 비동기](#동기와-비동기)
 * [마무리하며-0112수정](#마무리하며)
 
 # 실습환경 만들기  
@@ -469,6 +470,10 @@ var counter2 = makeCounterFunction(10);
 * counter2의 closure  
  * 함수 : function Increase(){}  
  * 환경 : var count = 10;  
+ 
+ # 동기와 비동기
+ * 동기: 위에서부터 아래로 순서대로 실행되는 것
+ * 비동기: EventListner의 콜백함수들은 순서대로 실행되지 않음, 언제 실행될지 모름.
 
 # 마무리하며
 _(20-01-12)_  
