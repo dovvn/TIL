@@ -1,5 +1,7 @@
 # TIL
+***
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/jdaun/TIL)](https://hits.seeyoufarm.com/)
+
 
 :pencil2:Today I Learned 오늘 배운 것을 기록한다.  
 [Yurim Jalynne Jin](https://github.com/milooy)님, [Namjun Kim](https://github.com/namjunemy)님, [Yun](https://github.com/cheese10yun)참고  
