@@ -1,12 +1,12 @@
 # Vanila.js
 노마드코더의 ['바닐라 JS로 크롬 앱 만들기'](https://academy.nomadcoders.co/p/javascript-basics-for-absolute-beginners-kr)챌린지를 수행하며 기록한 문서입니다.  
 기간: 6월 1일 ~ 6월 15일  
-
 ## 목차
 * [배우는 컨셉](#배우는-컨셉)
 * [기능](#기능)
+
 * [1일차](#1일차)
-* [2일차]()
+* [2일차](#2일차)
 
 ## 배우는 컨셉
 * VanillaJS
@@ -29,7 +29,7 @@
 * 현재 지역 날씨 (Weather with Geolocation)
 * Momentum App 클론코딩
 
-## 1,2일차
+## 1일차
 ### JavaScript
 * 웹에 쓰이는 하나뿐인 프로그래밍 언어   
 * 웹에 인터렉티브한 옵션을 주고 싶을 때 사용 
@@ -39,22 +39,93 @@
 * [three.js](https://threejs.org/): 자바스크립트 3D 기능 모음 사이트
 * [impact.js](https://impactjs.com/): 자바스크립트로 만든 게임 사이트
 
-## 3일차
 ### Vanila.js
 * [vanila.js](http://vanilla-js.com/)
 * 라이브러리나 프레임워크가 아닌 진짜 순순한 JS를 배운다. => 웹에서의 기초 언어를 배운다.
 * vaila.js를 배우고 난 후 => 라이브러리, 프레임워크 등등을 배우자.
-
-### 4일차
 * [repl.it](https://repl.it/): 다운로드 하지 않아도 되는 에디터, 소규모 프로젝트를 보여줄 때 적합.  
-* js파일은 항상 body마지막에 넣는다. => 
+* js파일은 항상 body마지막에 넣는다.
 
-
-
-
-
-
-
-
-
+## 2일차
+### 변수
+모든 Expression은 한 줄에 있어야 하며 ;로 끝을 맺는다.  
+단, instruction은 ;를 쓰지 않는다.  
+* Create + Initialize
+  * let
+    ```javascript
+    let a = 221;
+    ```
+    변수를 초기화하거나 생성할 때 let을 써야 한다. 사용할때는 쓰지 않아도 된다.
+  * const
+    ```javascript
+    const a = 221;
+    ```
+    constant상수라는 뜻, 안정적, 변수의 값이 바뀌지 않길 원하는 경우 사용한다.  
+    첫 사용은 const로, 진짜 필요할 때만 let!
+   * var  
+   3년전엔 var을 사용했지만 요즘엔 바뀌는건 let, 바뀌지 않는건 const를 사용한다.  
+* 프로그래머로서 모든 에러를 읽을 줄 알아야 한다.
+* 코멘트(주석 처리)
+  메모를 하고 싶을 때 사용  
+  * // 한줄짜리 주석
+  * /* */ 두줄짜리 주석
+* 변수에 값 저장하기
+  * String
+  ```javascript
+  const what = "Nicolas"
+  const want = "595959"
+  ```
+  * Boolean
+  ```javascript
+  const wat = true;
+  ```
+  * Number
+  ```javascript
+  const wat = 666;
+  ```  
+  * Float
+  ```javascript
+  const wat = 55.1;
+  ```    
+### 변수명
+스페이스 대신에 대문자를 써준다. 점이나 / 등 이상한 문자로 시작하면 안된다.
+ex)lowerOfWeek 
+### 데이터를 정렬하는 방법
+### 1.Array
+DB에서 가져온 리스트 데이터라면 Array선택
+데이터를 저장하는 곳, 리스트를 같이 저장한다.
+브라켓을 앞뒤로 써준다. [,]
+ex)요일 저장
+```javascript
+const mon = "Mon";
+const tue = "Tue";
+const wed = "Wed";
+const thu = "Thu";
+const fri = "Fri";
+console.log(mondau, tue, wed, thu, fri);
+```
+그러나 이것은 효과적이지 않다 => 데이터를 Array로 정렬할 수 있다.
+```javascript
+const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+console.log(daysOfWeek)
+console.log(daysOfWeek[2])
+```
+### 2.Object
+데이터를 합쳐서 만들어야 하고 많은 사람들을 Array로 만들어야 한다면 Object선택(Object안에 Array를 넣을 수 있음)  
+컬러브라켓을 앞뒤로 써준다. {,}  
+각 라벨에 데이터를 저장할 수 있다.  
+```javascript
+const nicoInfo = {
+  name:"Nico",
+  age:33,
+  gender:"Male",
+  isHandsome:true,
+  favMovies:["Along the gods", "LOTR", "Oldboy"],
+  favFood: [{name:"Kimchi", fatty:false}, {name:"Cheeseburger", fatty:true}]
+}
+console.log(nicoInfo.gender);
+```
+nicoInfo의 속성은 변경할 수 있지만 nicoInfo자체는 변경할 수 없다.  
+★콤바를 넣는 것을 반드시 기억하자!  
+※ js가 실행되지 않아도 html,css는 실행된다.
 
