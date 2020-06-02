@@ -92,10 +92,6 @@
 ex)lowerOfWeek 
 ### 데이터를 정렬하는 방법
 ### 1.Array
-DB에서 가져온 리스트 데이터라면 Array선택
-데이터를 저장하는 곳, 리스트를 같이 저장한다.
-브라켓을 앞뒤로 써준다. [,]
-ex)요일 저장
 ```javascript
 const mon = "Mon";
 const tue = "Tue";
@@ -110,6 +106,10 @@ const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 console.log(daysOfWeek)
 console.log(daysOfWeek[2])
 ```
+DB에서 가져온 리스트 데이터라면 Array선택  
+데이터를 저장하는 곳, 리스트를 같이 저장한다.  
+브라켓을 앞뒤로 써준다. [,]  
+ex)요일 저장  
 ### 2.Object
 데이터를 합쳐서 만들어야 하고 많은 사람들을 Array로 만들어야 한다면 Object선택(Object안에 Array를 넣을 수 있음)  
 컬러브라켓을 앞뒤로 써준다. {,}  
