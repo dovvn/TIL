@@ -102,7 +102,7 @@ const tue = "Tue";
 const wed = "Wed";
 const thu = "Thu";
 const fri = "Fri";
-console.log(mondau, tue, wed, thu, fri);
+console.log(mon, tue, wed, thu, fri);
 ```
 그러나 이것은 효과적이지 않다 => 데이터를 Array로 정렬할 수 있다.
 ```javascript
