@@ -7,6 +7,7 @@
 
 * [1일차](#1일차)
 * [2일차](#2일차)
+* [3일차](#3일차)
 
 ## 배우는 컨셉
 * VanillaJS
@@ -121,11 +122,82 @@ const nicoInfo = {
   gender:"Male",
   isHandsome:true,
   favMovies:["Along the gods", "LOTR", "Oldboy"],
-  favFood: [{name:"Kimchi", fatty:false}, {name:"Cheeseburger", fatty:true}]
+  favFood: [
+    {
+      name:"Kimchi", fatty:false
+    },
+    {
+      name:"Cheeseburger", fatty:true
+    }
+  ]
 }
-console.log(nicoInfo.gender);
+console.log(nicoInfo.favFood);
 ```
 nicoInfo의 속성은 변경할 수 있지만 nicoInfo자체는 변경할 수 없다.  
 ★콤바를 넣는 것을 반드시 기억하자!  
 ※ js가 실행되지 않아도 html,css는 실행된다.
+
+## 3일차
+### console
+console도 객체임을 확인할 수 있다.  
+console안에 있는 함수를 내장 함수라 한다.  
+### 함수
+내가 가져가 쓸 수 있는 한조각의 코드  
+```javascript
+function sayHello(name, age){
+ console.log('Hello', name, "you have", age, "years of age.");
+}
+sayHello("Nicolas", 15);
+console.log("Hi!");
+```
+함수는 인자를 받는다. 인자는 변수이고 함수안에서 사용할 이름으로 받는다.  
+함수에게 외부에 있는 데이터를 주는 방법이다.  
+console.log의 인자는 무수히 많다.  
+### 백틱을 사용한 console.log
+```javascript
+function sayHello(name, age){
+  return console.log(`Hello ${name} you are ${age} years old`)
+}
+const greetNicolas = sayHello("Nicolas", 14);
+console.log(greetNicolas);
+```
+greetNicolas는 sayHello 함수의 리턴값(실행된 결과값)이다.  
+```javascript
+const calculator = {
+  plus: function(a, b){
+    return a + b;
+  }
+}
+const plus = calculator.plus(5, 5);
+console.log(plus);
+```
+객체에 함수를 넣어서 사용할 수 있다.
+### DOM(Documnet Object Model)
+자바스크립트는 HTML에 있는 모든 요소를 가져와서 객체로 바꾼다. => DOM객체 사용
+우리가 사용하는 모든 함수는 DOM형태로 변경 가능하다.  
+```javascript
+const title =document.getElementById("title");
+console.log(tilte);
+title.innerHTML = "Hi! From JS"
+```
+
+querySelector은 노드의 첫번째 자식을 찾아 반환한다.
+```javascript
+const title = document.querySelector("#title");
+title.innerHTML = "Hi! From JS";
+title.style.color="red";
+document.title = "I own you now";
+```
+### 이벤트
+이벤트를 다룰때 마다 자바스크립트는 자동적으로 함수를 객체에 붙인다.  
+event객체는 이벤트 리스너가 호출될 때 인수로 전달되며 해당 타입의 이벤트에 대한 상세 정보를 저장한다.  
+```javascript
+const title = document.querySelector("#title");
+title.innerHTML='Hi! from JS';
+function handleClick(event){
+    title.style.color = 'red';
+    console.log(event)
+}
+title.addEventListener("click", handleClick);
+```
 
