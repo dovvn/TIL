@@ -8,6 +8,7 @@
 * [1일차](#1일차)
 * [2일차](#2일차)
 * [3일차](#3일차)
+* [4일차](#4일차)
 
 ## 배우는 컨셉
 * VanillaJS
@@ -200,4 +201,11 @@ function handleClick(event){
 }
 title.addEventListener("click", handleClick);
 ```
+
+## 4일차
+## 조건문 if else
+=== 는 단순히 체크 하는 것이지 메모리 할당 x  
+
+flatuicolors.com 색상코드를 얻을 수 있는 사이트  
+
 
