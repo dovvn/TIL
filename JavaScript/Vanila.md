@@ -207,5 +207,88 @@ title.addEventListener("click", handleClick);
 === 는 단순히 체크 하는 것이지 메모리 할당 x  
 
 flatuicolors.com 색상코드를 얻을 수 있는 사이트  
+이벤트의 근원을 알고 싶으면 [MDN](https://developer.mozilla.org/ko/)사용하기.
+
+## 글자 색 변경하기
+```javascript
+function handleOffline(){
+    console.log("Bye bye");
+}
+
+function handleOnline(){
+    console.log("Welcome back")
+}
+window.addEventListener("offline", handleOffline);
+window.addEventListener("online", handleOnline)
+```
+와이파이가 꺼지고 켜졌을 때 이벤트가 실행된다.  
+
+js파일에서 css기능을 넣지 않는 것이 복잡하고 좋다.  
+```javascript
+const title = document.querySelector('#title');
+
+const CLICKED_CLASS = "clicked";
+
+function handleClick(){
+    const currentClass = title.className;
+    if(currentClass != CLICKED_CLASS){
+        title.className = CLICKED_CLASS;
+    } else{
+        title.className = "";
+    }
+}
+
+function init(){
+    title.addEventListener("mouseenter", handleClick);
+}
+
+init();
+```
+js에서 if문을 사용해서 css의 색깔을 변경하는 이벤트를 처리할 수 있다.
+
+```javascript
+const title = document.querySelector('#title');
+
+const CLICKED_CLASS = "clicked";
+
+function handleClick(){
+    const hasClass = title.classList.contains(CLICKED_CLASS);
+    if(hasClass){
+        title.className = "";
+    } else{
+        title.classList.add(CLICKED_CLASS);
+    }
+}
+
+function init(){
+    title.addEventListener("mouseenter", handleClick);
+}
+
+init();
+```
+위에서 classList는 add와 contains함수를 제공한다.  
+add는 클래스를 추가해주고 contains는 value가 있는지 체크한다.(true/false)   
+=>이 두가지 기능은 toggle로 대체가능하다.  
+
+```javascript
+const title = document.querySelector('#title');
+
+const CLICKED_CLASS = "clicked";
+
+function handleClick(){
+    title.classList.toggle(CLICKED_CLASS);
+}
+
+function init(){
+    title.addEventListener("mouseenter", handleClick);
+}
+
+init();
+```
+toggle은 함수 안에 있는 값을 체크하고 있으면 add, 없으면 delete한다.  
+
+
+
+
 
 
