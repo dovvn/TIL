@@ -9,6 +9,7 @@
 * [2일차](#2일차)
 * [3일차](#3일차)
 * [4일차](#4일차)
+* [5일차](#5일차)
 
 ## 배우는 컨셉
 * VanillaJS
@@ -287,8 +288,14 @@ init();
 ```
 toggle은 함수 안에 있는 값을 체크하고 있으면 add, 없으면 delete한다.  
 
+## 5일차
+항상 나눠서 작은것 부터 문제를 해결하기: 분할정복
+```javascript
+date.getMinutes() //현재 분
+date.getHours() //현재 시간
+date.getDate()// 현재날짜  
+```
 
-
-
+setInterval(함수, 실행할 시간 간격 milliseconds간격=>3000이 3초)
 
 
