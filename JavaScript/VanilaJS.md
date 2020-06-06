@@ -10,6 +10,7 @@
 * [3일차](#3일차)
 * [4일차](#4일차)
 * [5일차](#5일차)
+* [6일차](#6일차)
 
 ## 배우는 컨셉
 * VanillaJS
@@ -297,5 +298,30 @@ date.getDate()// 현재날짜
 ```
 
 setInterval(함수, 실행할 시간 간격 milliseconds간격=>3000이 3초)
+
+## 6일차
+querySelector은 찾은 것의 첫번째값을 가져오지만 querySelectorAll은 모든 걸 가져온다. 즉, 클래스명에 따른 엘리먼트들을 가져오는데 이건 array를 준다. 
+getElementById는 태그로 엘리먼트를 가져온다. input, body, html, dive section등  
+
+* local storage
+작은 정보를 컴퓨터에 저장하는 방법
+f12>application>local storage에 가면 브라우저가 데이터가 저장되어 있는 모습을 볼 수 있다.
+새로고침을 해도 로컬 스토리지에 그대로 남아있다.
+```javascript
+localStorage.setItem("nico", true); //저장
+localStorage.getItem("nico");
+
+```
+
+* preventDefault()
+event의 기본 동작은 Enter키를 누르면 프로그램 되어진 대로 다른곳으로 가고 페이지가 새로고침 된다.  
+이를 막기 위해 prevetDefault()를 사용한다.  
+
+
+
+
+
+
+
 
 
