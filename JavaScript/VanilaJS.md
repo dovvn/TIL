@@ -1,6 +1,6 @@
 # Vanila.js
-노마드코더의 ['바닐라 JS로 크롬 앱 만들기'](https://academy.nomadcoders.co/p/javascript-basics-for-absolute-beginners-kr)챌린지를 수행하며 기록한 문서입니다.  
-기간: 6월 1일 ~ 6월 15일  
+노마드코더의 ['바닐라 JS로 크롬 앱 만들기'](https://academy.nomadcoders.co/p/javascript-basics-for-absolute-beginners-kr)를 수행하며 기록한 문서입니다.  
+기간: 6월 1일 ~ 6월 14일  
 ## 목차
 * [배우는 컨셉](#배우는-컨셉)
 * [기능](#기능)
