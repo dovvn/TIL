@@ -318,9 +318,12 @@ localStorage.getItem("nico");
 event의 기본 동작은 Enter키를 누르면 프로그램 되어진 대로 다른곳으로 가고 페이지가 새로고침 된다.  
 이를 막기 위해 prevetDefault()를 사용한다.  
 
-## 7일차
-
-
+## 7일차 
+appendChild(): father element에 넣는다.  
+자바스크립트는 local storage에 있는 모든 데이터를 String으로 저장하려고 한다.  
+JSON.stringify()으로 Object->String으로 바꿔준다.  
+forEach(): arrray에 담겨있는 것들 각각에 한번씩 함수를 실행시켜 준다.
+filter(): array읭 모든 아이템을 통해 함수를 실행하고 true인 아이템들만 가지고 새로운 array를 만든다.
 
 
 
