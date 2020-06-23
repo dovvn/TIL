@@ -26,7 +26,7 @@
   * [포인터로 버블 정렬 함수 만들기](https://github.com/jdaun/TIL/blob/master/C/c_ex/bubblesort.md)
   * [삽입정렬 만들기](https://github.com/jdaun/TIL/blob/master/C/c_ex/insertsort.md)
 ### Python
-* [Python으로 웹 스크립터 만들기](https://github.com/dovvn/TIL/blob/master/Python/About-Python.md)
+* [Python으로 웹 스크립터 만들기](https://github.com/dovvn/TIL/blob/master/Python/Python_Scraper.md)
 ### JavaScript
 * [JavsScript 이론](https://github.com/jdaun/TIL/blob/master/JavaScript/concept.md)
 * [JavaScript 실습](https://github.com/jdaun/TIL/blob/master/JavaScript/jsExample.md)
