@@ -40,3 +40,7 @@ fmt4 = f'{a} x {b} = {a*b}'
 fmt4 = f'{a} x {b} = {a*b:4}' #자리수 추가
 print(fmt4)
 ```
+## 16번
+```python
+```
+* Python Array[::]
