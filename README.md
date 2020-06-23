@@ -43,5 +43,3 @@
   * 문제해결, 파이썬 개요, 연산자, 제어문장1
 * [Python 프로그래밍 II](https://github.com/jdaun/TIL/blob/master/MOOC/Python_part2.md)
   * 제어문장2, 함수와 모듈, 데이터 구조, 파이썬과 인공지능
-### 책
-* 클라우스 슈밥의 제4차 산업혁명(예정)
