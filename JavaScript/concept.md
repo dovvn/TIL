@@ -343,6 +343,7 @@ Array.isArray(배열같은객체) //false
 * .unshift(element) : 배열의 앞에 엘리먼트 추가
 * .reverse(): 배열을 뒤집음
 * .sort(): 배열 값을 정렬함
+* splice(0, 1, 100): 0번째 원소에서 1개를 추출하고 그 자리에 100을 추가함
 
 ## 배열 붙이기, 검색하기
 * arr1.concat(arr2) : arr1과 arr2 붙임
